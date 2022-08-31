@@ -1,0 +1,248 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #dfe2e3;
+    font-family: 'Cinzel', serif;
+}
+
+#header {
+    background-color: #282726;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    text-align: right;
+}
+
+ul {
+    margin-right: 3rem;
+}
+
+li {
+    display: inline-block;
+}
+
+li a {
+    color: #dfe2e3;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/**************** Header ****************/
+
+.image-container {
+    display: inline-block;
+}
+
+
+/**************** HERO ******************/
+
+#hero {
+    background-image: url(../images/imagen-fondo.jpg);
+    background-repeat: no-repeat;
+    height: 95vh;
+    z-index: 0;
+}
+
+.hero-text {
+    background-color: #282726;
+    border: 5px solid #dfe2e3;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.9);
+    position: absolute;
+    right: 15%;
+    top: 40%;
+}
+
+.text {
+    padding: 1.5em 3em;
+}
+
+.hero-text h1, .hero-text p {
+    color: #dfe2e3;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    line-height: 2;
+}
+
+/************ MAIN INDEX ***************/
+
+.tattoo-intro {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin: 8rem auto 3rem;
+    width: 60%;
+}
+
+#main .tattoo-intro p {
+    color: #86817c;
+    padding: 1em 3em;
+}
+
+.general-div {
+    width: 25%;
+}
+
+/************ MAIN GALERIA *************/
+
+.container-general {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2em;
+    justify-content: space-evenly;
+    margin: 7rem 1em;
+}
+
+.container-general img {
+    border-radius: 5%;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.9);
+    width: 25%;
+}
+
+.container-general__texto {
+    font-size: 1.5rem;
+    width: 40%;
+}
+
+
+/************ MAIN NOSOTROS *************/
+
+.artista {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2em;
+    justify-content: space-evenly;
+    margin: 4em 1em;
+}
+
+/*********** MAIN PIERCINGS *************/
+
+.texto-piercing {
+    color: #86817c;
+    font-size: 1.5rem;
+    width: 25%;
+}
+
+.galeria-piercing {
+    background-color: #86817c;
+    font-size: 2rem;
+    text-align: center;
+    padding: 3em 0;
+}
+
+.catalogo-piercing {
+    background-color: #dfe2e3;
+    color: #282726;
+    margin-top: 5rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.catalogo-piercing p {
+    width: 25%;
+}
+
+/************** CONTACTO ****************/
+
+.faq {
+    font-size: 1.25rem;
+    margin: 7rem auto 4rem;
+    width: 50%;
+}
+
+.faq li {
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+form {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+legend {
+    margin: 1rem;
+}
+
+textarea {
+    display: block;
+    margin: 1rem auto 3rem;
+    width: 40%;
+    resize: none;
+}
+
+fieldset {
+    margin-bottom: 3rem;
+}
+
+label {
+    display: block;
+
+}
+
+.btn {
+    border: none;
+    border-radius: 40px;
+    background-color: #282726;
+    color: #dfe2e3;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.25rem;
+    margin: 1rem;
+    padding: 0.5em 2em;
+}
+
+.btn:hover {
+    background-color: #86817c;
+    color: #282726;
+}
+
+input {
+    display: block;
+    font-family: 'Cinzel', serif;
+    margin: 1rem auto;
+    padding: 0.5em;
+    width: 40%;
+}
+
+/**************** Footer ****************/
+
+#footer {
+    background-color: #282726;
+    color: #dfe2e3;
+    padding: 2rem;
+    text-align: center;
+}
+
+#footer a {
+    color: #dfe2e3;
+    display: inline-block;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+#footer a:visited {
+    color: #dfe2e3;
+}
+
+.footer__info {
+    border: 2px solid #86817c;
+    margin: 0 auto;
+    padding: 2rem;
+    width: 50%;
+}
