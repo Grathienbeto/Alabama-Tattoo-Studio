@@ -5,16 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;900&display=swap" rel="stylesheet">
     <title>TATTOO STUDIO</title>
 </head>
 <body>
 
+    <!-- HEADER  -->
     <header id="header">
-        <ul>
-            <li><a href="index.html">HOME</a></li>
+        <h1>OZZI</h1>
+        <ul class="header__ul">
+            <li ><a href="index.html" class="active">HOME</a></li>
             <li><a href="paginas/galeria.html">GALERIA</a></li>
             <li><a href="paginas/about.html">NOSOTROS</a></li>
             <li><a href="paginas/piercings.html">PIERCINGS</a></li>
@@ -22,57 +21,96 @@
         </ul>
     </header>
 
+    <!-- HERO -->
     <div id="hero">
-        <div class="hero-text">
-            <div class="text">
-                <h1>TATTOO STUDIO</h1>
-                <p>El lema del estudio<br>
-                    El lema del estudio
-                </p>
-            </div>
+        <div class="hero__box">
+            <h1>OZZI CAVIGLIA</h1>
+            <p>El despues.<br>
+               Del despues de la vida.
+            </p>
         </div>
     </div>
 
+
+    <!-- MAIN -->
     <main id="main">
-        <section class="tattoo-intro">
-            <h1 class="text-center">Intro al mundo de tatuajes</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus numquam, est vitae aliquam, non suscipit voluptate minus voluptatum pariatur cupiditate, esse perferendis dolor maxime veritatis! Repudiandae aliquid accusamus similique porro velit quod vel eius assumenda, fugiat delectus enim! Sed at nobis, ratione ducimus maxime a.</p>
-        </section>
 
+        <!-- INTRO -->
+        <article class="intro">
+
+            <div class="intro__text">
+                <h1 class="">Intro al mundo de tatuajes</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quo quisquam quam alias praesentium, provident est cum eos quidem placeat ratione at, quos sapiente enim.</p>
+            </div>
+
+            <picture class="intro__img">
+                <img src="./images/ozzi.png" alt="">
+            </picture>
+
+        </article>
+
+        <!-- SERVICIOS -->
+
+        <section class="servicios">
+
+            <h1 class="servicios__title ">Servicios</h1>
+            <div class="servicios__container">
+                <div class="servicios__box">
+                    <h1>Tatuajes</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non error sequi aliquid placeat? Aspernatur, sapiente.</p>
+                </div>
+                <div class="servicios__box">
+                    <h1>Piercings</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non error sequi aliquid placeat? Aspernatur, sapiente.</p>
+                </div>
+                <div class="servicios__box">
+                    <h1>Diseños</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non error sequi aliquid placeat? Aspernatur, sapiente.</p>
+                </div>
+            </div class="servicios__container">
+
+        </section>
         
-        <section class="tattoo-intro">
-            <h1>Voy a esperar la clase de grid para hacer esta parte </h1>
-            <p>Para poder acomodar las fotos y los textos, teniendo imagenes de varios tamaños se me comlpica un poco. Todo el codigo con las imagenes esta comentado</p>
-            
-            <!-- <img src="images/design.jpg" alt="">
-            <div class="general-div">
-                <h1>PIERCINGS</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, reiciendis! Voluptate quae libero ipsam reprehenderit facilis doloremque, laudantium nemo! Repudiandae.</p>
-            </div>
+        <!-- ARTISTAS -->
+        <section class="artistas">
 
-            <img src="images/piercing-3.jpg" alt="">
-            <div class="general-div">
-                <h1>TATTOO DESIGN</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum eligendi culpa error possimus impedit ratione delectus in asperiores aliquid. Architecto sit veniam aut ducimus iure quo fugiat non optio magnam?</p>
-            </div>
+                <img src="./images/artista-1.jpg" alt="" class="artista__fotoUno artista__foto">
 
-            <img src="/images/joyeria-1.jpg" alt="">
-            <div class="general-div">
-                <h1>PRODUCTOS</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur explicabo doloribus quidem in possimus voluptate architecto facilis dolore reiciendis eveniet, nesciunt eum officiis placeat tempore!</p>
-            </div> -->
+                <div class="artista__textoUno">
+                    <h1>Artista 1</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quas animi nihil mollitia consequatur ad, deleniti, quidem recusandae quia est iure at quae minima a neque nemo reiciendis tempora rerum.
+                    Quidem quo, cum ex laborum a, sunt, asperiores voluptatibus ipsa pariatur veritatis eveniet eius. Cumque quod voluptate commodi consectetur hic nemo! Sed nostrum ipsa, praesentium tenetur placeat beatae voluptate autem?</p>
+                </div>
+ 
+                <div class="artista__textoDos">
+                    <h1>Artista 2</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quas animi nihil mollitia consequatur ad, deleniti, quidem recusandae quia est iure at quae minima a neque nemo reiciendis tempora rerum.
+                    Quidem quo, cum ex laborum a, sunt, asperiores voluptatibus ipsa pariatur veritatis eveniet eius. Cumque quod voluptate commodi consectetur hic nemo! Sed nostrum ipsa, praesentium tenetur placeat beatae voluptate autem?</p>
+                </div>
 
-
+                <img src="./images/artista-1.jpg" alt="" class="artista__fotoDos artista__foto">
         </section>
+
     </main>
 
 
     <footer id="footer">
+
+        <div>
+            <h3>REGLAS</h3>
+            <p>Menores de 18 años solo con autorización firmada de los padres.</p>
+        </div>
+
         <div class="footer__info">
-            <h3>Footer con las redes sociales e info de contacto</h3>
+            <h3 >ESCRIBINOS</h3>
             <a href="#">Instagram</a>
             <a href="#">Whatsapp.me</a>
             <p>Telefono: 0303456</p>
+        </div>
+
+        <div>
+            <h3>UBICACIÓN</h3>
+            <a href="https://www.google.com/maps/place/Espa%C3%B1a+200-238,+Alta+Gracia,+C%C3%B3rdoba/@-31.6593095,-64.4360483,17z/data=!3m1!4b1!4m8!1m2!2m1!1sgoogle+map+ubicacion!3m4!1s0x942d573526288121:0x8bbb496a3caa5113!8m2!3d-31.6593137!4d-64.4315635">España 210</a> <!-- Link a GOOGLE map con la ubicacion -->
         </div>
     </footer>
 
