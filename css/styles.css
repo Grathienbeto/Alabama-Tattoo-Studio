@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap');
 
 :root {
     --color-dark: #282726;
@@ -7,7 +7,7 @@
     --color-contrast: #b56e20;
 
     --font-titles: 'Bebas Neue';
-    --font-text:'Roboto Mono', monospace;
+    --font-text:'Roboto', monospace;
 
     --font-size-high: 4.5rem;
     --font-size-mid: 3.0rem;
@@ -190,13 +190,13 @@ main {
 }
 
 .servicios__box h1 {
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-mid);
     padding-bottom: var(--padding-xsmall);
     text-decoration: underline var(--color-contrast);
 }
 
 .servicios__box p {
-    font-size: var(--font-size-xsmall);
+    font-size: var(--font-size-small);
 }
 
     /* Artistas */
@@ -231,7 +231,7 @@ main {
 }
 
 .artista__foto {
-    min-width: 400px;
+    min-width: 275px;
     max-width: 600px;
 }
 
@@ -269,6 +269,11 @@ main {
     border-radius: 25px;
     box-shadow: 5px 7px 20px rgba(1,1,1,0.8);
 }
+
+.galeria__img:hover {
+    
+}
+
 
 /*** MAIN PIERCINGS ***/
 
@@ -333,6 +338,10 @@ main {
 
 /*** MAIN FAQ ***/
 
+.overflow {
+    overflow-x: hidden;
+}
+
 .faq {
     font-family: var(--font-text);
     font-size: var(--font-size-mid);
@@ -386,6 +395,7 @@ input {
 label {
     font-size: 2rem;
     font-weight: bold;
+    text-decoration: underline var(--color-contrast);
 }
 
 textarea {
