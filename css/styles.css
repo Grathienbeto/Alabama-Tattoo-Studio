@@ -268,10 +268,14 @@ main {
     max-width: 25%;
     border-radius: 25px;
     box-shadow: 5px 7px 20px rgba(1,1,1,0.8);
+    transition: all 0.5s ease-in-out;
 }
 
 .galeria__img:hover {
-    
+   max-width: 28%;
+   opacity: 0.8;
+   transition: all 0.5s ease-in-out;
+   cursor: pointer;
 }
 
 
