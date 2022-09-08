@@ -94,7 +94,7 @@ header a:after {
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
-  header a:hover:after {
+header a:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
