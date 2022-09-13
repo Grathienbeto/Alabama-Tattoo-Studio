@@ -33,6 +33,7 @@ nav {
     color: var(--color-light);
     font-family: var(--font-titles);
     font-size: var(--font-size-mid);
+    margin: 0 !important;
 }
 
 nav a {
@@ -107,7 +108,7 @@ body {
     background-color: var(--color-light) ;
     margin: 0 !important;
     padding: 0 !important;
-    width: 100% !important;
+    width: 100% !important; 
     overflow-x: hidden !important;
 }
 
@@ -187,6 +188,7 @@ body {
 .body-galeria {
     background-color: var(--color-dark);
 }
+
 .titulo {
     color: var(--color-light);
     font-family: var(--font-titles);
@@ -197,6 +199,8 @@ body {
 
 .gal_tatuaje {
     background-color: var(--color-dark); 
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .boton-galeria-izq {
@@ -207,6 +211,85 @@ body {
     margin: auto;
     max-width: 35%;
     max-height: auto;
+}
+
+/***** CONTACTO *****/
+
+.faq__title {
+    font-size: var(--font-size-high);
+    font-family: var(--font-titles);
+    text-decoration: underline var(--color-contrast);
+    padding:var(--padding-high) 0;
+}
+
+.faq {
+    font-family: var(--font-titles);
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.faq div h1 {
+    font-size: var(--font-size-small);
+}
+
+.faq div p {
+    font-size: var(--font-size-xsmall);
+    color: var(--color-middle);
+}
+
+form {
+    font-family: var(--font-titles);
+    font-size: var(--padding-xsmall);
+    margin: var(--font-size-high) auto 0 !important;
+    max-width: 1000px;
+    text-align: center;
+}
+
+legend {
+    font-size: var(--font-size-small);
+    font-weight: bold;
+    margin-bottom: var(--padding-xsmall);
+    max-width: 60%;
+}
+
+label {
+    font-size: var(--font-size-xsmall);
+    font-weight: bold;
+}
+
+label,
+input {
+    display: block;
+    margin: 2rem auto 0;
+}
+
+input {
+    font-family:var(--font-titles);
+    font-size: 1.6rem;
+    margin: var(--padding-xsmall) auto;
+    min-width: 60%;
+}
+
+
+textarea {
+    display: block;
+    font-family: var(--font-text);
+    margin: var(--padding-small) auto;
+    max-width: 60% !important;
+    resize: none;
+}
+
+.btn {
+    background-color: var(--color-dark) !important;
+    border: 4px solid var(--color-dark) ;
+    color: var(--color-light);
+    max-width: 60%;
+}
+
+.btn:hover {
+    color: var(--color-light) !important;
+    border: 4px solid var(--color-contrast) !important;
+    opacity: 0.95;
 }
 
 /***** FOOTER *****/
@@ -239,7 +322,6 @@ footer h3 {
 
 
 @media screen and (max-width: 800px) {
-    
     .navbar-nav {
         font-size: var(--font-size-small);
     }
@@ -324,6 +406,20 @@ footer h3 {
     .galeria__img {
         max-width: 100%;
     }
+
+    .faq__title {
+        font-size: var(--font-size-mid);
+        text-align: center;
+        padding-bottom: var(--padding-mid);
+    }
+    
+    .faq div h1 {
+        font-size: var(--font-size-small);
+    }
+
+    .faq div p {
+        font-size: var(--font-size-xsmall);
+    }
     /***********************/
     
     .piercingsServicio{
@@ -353,27 +449,10 @@ footer h3 {
     }
 
     /* */
-    .faq {
-        font-size: var(--font-size-xsmall);
-    }
+
     
-    .faq__preguntas {
-        padding-bottom: var(--padding-high);
-    }
-    
-    .faq__title {
-        font-size: var(--font-size-mid);
-        padding-bottom: var(--padding-mid);
-    }
-    
-    .faq div p {
-        padding: var(--padding-small) 0;
-        line-height: 1.5;
-    }
-    
-    form {
-        font-size: var(--padding-small);
-    }
+    /* */
+
     
     legend {
         font-size: var(--font-size-xsmall);
@@ -381,7 +460,8 @@ footer h3 {
     }
     
     input {
-        min-width: 80%;
+        padding: 0.3rem;
+        min-width: 100%;
     }
     
     label {
@@ -390,10 +470,7 @@ footer h3 {
     }
     
     textarea {
-        display: block;
-        margin: var(--padding-small) auto;
-        min-width: 80%;
-        padding: 0.5em;
+        min-width: 100%;
         resize: none;
     }
 }
@@ -433,12 +510,16 @@ footer h3 {
         min-width: 450px;
         max-width: 600px !important;
     }
+
+    .galeria__img {
+        max-width: 35%;
+    }
     /*******/
 
 
-    
-    .galeria__img {
-        max-width: 35%;
+
+    .gal_tatuaje {
+        margin: 0;
     }
 
     .piercing__texto {
