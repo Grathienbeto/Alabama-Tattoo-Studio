@@ -6,62 +6,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">      
-    
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styles2.css">
     <title>GALERIA</title>
 </head>
-<body>
-    
-    <header id="header">
-        <h1 class="h1">OZZI</h1>
-        <ul class="header__ul">
-            <li><a href="../index.html">HOME</a></li>
-            <li><a href="./galeria.html" class="active">GALERIA</a></li>
-            <li><a href="./about.html">NOSOTROS</a></li>
-            <li><a href="./piercings.html">PIERCINGS</a></li>
-            <li><a href="./contacto.html">CONTACTO</a></li>
-        </ul>
-    </header>
 
-    <div id="hero">
+<body class="container-fluid body-galeria">
+    
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg row">
+
+        <div class="container-fluid">
+
+            <div>
+                <a class="brand ps-5" href="#">OZZI</a>
+            </div>
+
+            <button class="navbar-toggler blanco" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon blanco"></span>
+            </button>
+
+            <div class="collapse navbar-collapse ms-5 underline" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link" href="../index.html">HOME</a>
+                <a class="nav-link active" aria-current="page" href="./galeria.html">TATUAJES</a>
+                <a class="nav-link" href="./piercings.html">PIERCINGS</a>
+                <a class="nav-link" href="./about.html">NOSOTROS</a>
+                <a class="nav-link" href="./contacto.html">CONTACTO</a>
+              </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
         <div class="hero__box">
-            <h1 class="h2">GALERIA</h1>
-            <p>Los últimos trabajos de nuestros <br>
+            <h1 class="hero__title">GALERIA</h1>
+            <p>Los últimos trabajos <br>
                 que han hecho nuestros artistas
             </p>
         </div>
-    </div>
+    </section>
     
-    <main>
-        <h1>la idea aca es poner un carrousel cuando aprenda a</h1>
-        <div class="container__galeria">
-            <img src="../images/galeria-1.jpg" alt="imagen de galeria" class="galeria__img">
-            <img src="../images/galeria-2.jpg" alt="imagen de galeria" class="galeria__img">
-            <img src="../images/galeria-3.jpg" alt="imagen de galeria" class="galeria__img">
-            <img src="../images/galeria-4.jpg" alt="imagen de galeria" class="galeria__img">
-            <img src="../images/galeria-5.jpg" alt="imagen de galeria" class="galeria__img">
-            <img src="../images/galeria-6.jpg" alt="imagen de galeria" class="galeria__img">
-        </div>
-    </main>
+    <!-- GALERIA -->
+    <article class="row gal_tatuaje">
 
-    <footer id="footer">
+        <h1 class="col-12 text-center titulo">GALERIA</h1>
 
-        <div>
-            <h3>REGLAS</h3>
-            <p>Menores de 18 años solo con autorización firmada de los padres.</p>
+        <div id="carouselExampleControls" class="carousel slide gal-tatuaje col-12" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../images/galeria-1.jpg" class="d-block w-50" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/galeria-3.jpg" class="d-block w-50" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/galeria-4.jpg" class="d-block w-50" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/galeria-5.jpg" class="d-block w-50" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/galeria-6.jpg" class="d-block w-50" alt="...">
+                </div>
+                
+            </div>
+
+            <button class="carousel-control-prev boton-galeria-izq" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next boton-galeria-der" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="pb-5"></div>
+
+    </article>
+
+
+
+    <footer id="footer" class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-sm-12 col-md-4 px-3">
+                <h3>REGLAS</h3>
+                <p>Menores de 18 años solo con autorización firmada de los padres.</p>
+            </div>
+
+            <div class="col-sm-12 col-md-4 px-3">
+                <h3>ESCRIBINOS</h3>
+                <a href="#">Instagram</a>
+                <a href="#">Whatsapp.me</a>
+                <p>Telefono: 0303456</p>
+            </div>
+
+            <div class="col-sm-12 col-md-4 px-3">
+                <h3>UBICACIÓN</h3>
+                <a href="https://www.google.com/maps/place/Espa%C3%B1a+200-238,+Alta+Gracia,+C%C3%B3rdoba/@-31.6593095,-64.4360483,17z/data=!3m1!4b1!4m8!1m2!2m1!1sgoogle+map+ubicacion!3m4!1s0x942d573526288121:0x8bbb496a3caa5113!8m2!3d-31.6593137!4d-64.4315635">España 210</a> <!-- Link a GOOGLE map con la ubicacion -->
+            </div>
         </div>
 
-        <div class="footer__info">
-            <h3 >ESCRIBINOS</h3>
-            <a href="#">Instagram</a>
-            <a href="#">Whatsapp.me</a>
-            <p>Telefono: 0303456</p>
-        </div>
-
-        <div>
-            <h3>UBICACIÓN</h3>
-            <a href="https://www.google.com/maps/place/Espa%C3%B1a+200-238,+Alta+Gracia,+C%C3%B3rdoba/@-31.6593095,-64.4360483,17z/data=!3m1!4b1!4m8!1m2!2m1!1sgoogle+map+ubicacion!3m4!1s0x942d573526288121:0x8bbb496a3caa5113!8m2!3d-31.6593137!4d-64.4315635">España 210</a> <!-- Link a GOOGLE map con la ubicacion -->
-        </div>
     </footer>
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
 </body>
 </html>

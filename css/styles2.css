@@ -1,248 +1,419 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap');
+
+:root {
+    /* PALETA DE COLORES */
+    --color-dark: #282726;
+    --color-middle: #777472fd;
+    --color-light: #dfe2e3;
+    --color-contrast: #b56e20;
+
+    /* FUENTES */
+    --font-titles: 'Bebas Neue';
+    --font-text:'Roboto', monospace;
+
+    /* TAMAÑO DE LETRA*/
+    --font-size-vhigh: 7rem;
+    --font-size-high: 5rem;
+    --font-size-mid: 3.5rem;
+    --font-size-small: 2.5rem;
+    --font-size-xsmall: 1.75rem;
+
+    /* TAMAÑO DE SEPARACION*/
+    --padding-vhigh: 7rem;
+    --padding-high: 5rem;
+    --padding-mid: 3.5rem;
+    --padding-small: 2rem;
+    --padding-xsmall: 1rem;
 }
 
-body {
-    background-color: #dfe2e3;
-    font-family: 'Cinzel', serif;
+/***** NAV *****/
+nav {
+    background-color: var(--color-dark);
+    border-bottom: 4px solid var(--color-contrast) ;
+    color: var(--color-light);
+    font-family: var(--font-titles);
+    font-size: var(--font-size-mid);
 }
 
-#header {
-    background-color: #282726;
-    font-size: 1.5rem;
-    padding: 1rem 0;
-    text-align: right;
+nav a {
+    color: var(--color-light);
 }
 
-ul {
-    margin-right: 3rem;
+nav a:visited {
+    color: var(--color-light) !important ;
 }
 
-li {
-    display: inline-block;
-}
-
-li a {
-    color: #dfe2e3;
+.brand {
+    font-size: var(--font-size-high);
     text-decoration: none;
-    margin: 0 1rem;
 }
 
-.text-center {
-    text-align: center;
+.blanco {
+    border: var(--color-light);
+    background-color: var(--color-light) ;
 }
 
-
-/**************** Header ****************/
-
-.image-container {
+/* este hover y su animacion son robo jaja, queria una animacion linda pero no las manejo todavia*/
+.underline a:hover {
     display: inline-block;
+    position: relative;
+} 
+.underline a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-contrast);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.underline a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
-
-/**************** HERO ******************/
-
+/***** HERO *****/
 #hero {
+    background-color: var(--color-dark);
     background-image: url(../images/imagen-fondo.jpg);
     background-repeat: no-repeat;
-    height: 95vh;
+    border-bottom: 4px solid var(--color-contrast);
+    height: 90vh;
     z-index: 0;
 }
 
-.hero-text {
-    background-color: #282726;
-    border: 5px solid #dfe2e3;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.9);
+.hero__box {
+    background-color: var(--color-dark);
+    border: 3px solid var(--color-contrast);
+    border-radius: 25px;
+    color: var(--color-light);
+    font-family: var(--font-titles);
+    font-size: var(--font-size-mid);
+    letter-spacing: 0.25rem;
+    padding: var(--padding-mid);
     position: absolute;
-    right: 15%;
+    right: 5%;
     top: 40%;
 }
 
-.text {
-    padding: 1.5em 3em;
+.hero__title {
+    font-size: var(--font-size-high);
 }
 
-.hero-text h1, .hero-text p {
-    color: #dfe2e3;
+body {
+    background-color: var(--color-light) ;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    overflow-x: hidden;
 }
 
-.hero-text h1 {
-    font-size: 4rem;
+/***** GALERIA TATUAJES *****/
+
+.body-galeria {
+    background-color: var(--color-dark);
+}
+.titulo {
+    color: var(--color-light);
+    font-family: var(--font-titles);
+    font-size: var(--font-size-vhigh);
+    text-decoration: underline var(--color-contrast);
+    padding: var(--padding-high) 0;
 }
 
-.hero-text p {
-    font-size: 1.5rem;
+.gal_tatuaje {
+    background-color: var(--color-dark); 
+}
+
+.boton-galeria-izq {
+    margin: 0;
+}
+
+.carousel-item img{
+    margin: auto;
+    max-width: 40%;
+    max-height: auto;
+}
+
+
+footer {
+    background-color: var(--color-dark);
+    border-top: 4px solid var(--color-contrast);
+    color: var(--color-light);
+    font-family: var(--font-text);
+    font-size: var(--font-size-xsmall);
+    margin-top: var(--padding-high);
     line-height: 2;
-}
-
-/************ MAIN INDEX ***************/
-
-.tattoo-intro {
-    font-size: 2rem;
-    line-height: 1.5;
-    margin: 8rem auto 3rem;
-    width: 60%;
-}
-
-#main .tattoo-intro p {
-    color: #86817c;
-    padding: 1em 3em;
-}
-
-.general-div {
-    width: 25%;
-}
-
-/************ MAIN GALERIA *************/
-
-.container-general {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 2em;
-    justify-content: space-evenly;
-    margin: 7rem 1em;
-}
-
-.container-general img {
-    border-radius: 5%;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.9);
-    width: 25%;
-}
-
-.container-general__texto {
-    font-size: 1.5rem;
-    width: 40%;
-}
-
-
-/************ MAIN NOSOTROS *************/
-
-.artista {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 2em;
-    justify-content: space-evenly;
-    margin: 4em 1em;
-}
-
-/*********** MAIN PIERCINGS *************/
-
-.texto-piercing {
-    color: #86817c;
-    font-size: 1.5rem;
-    width: 25%;
-}
-
-.galeria-piercing {
-    background-color: #86817c;
-    font-size: 2rem;
-    text-align: center;
-    padding: 3em 0;
-}
-
-.catalogo-piercing {
-    background-color: #dfe2e3;
-    color: #282726;
-    margin-top: 5rem;
-    font-size: 2rem;
+    padding: var(--padding-high);
     text-align: center;
 }
 
-.catalogo-piercing p {
-    width: 25%;
+footer a:visited {
+    color: var(--color-light)
 }
 
-/************** CONTACTO ****************/
-
-.faq {
-    font-size: 1.25rem;
-    margin: 7rem auto 4rem;
-    width: 50%;
+footer h3 {
+    font-size: var(--font-size-small);
+    text-decoration: underline var(--color-contrast);
+    padding-bottom: var(--padding-small);
 }
 
-.faq li {
-    font-weight: bold;
-    margin-top: 1rem;
+
+@media screen and (max-width: 800px) {
+    
+    .navbar-nav {
+        font-size: var(--font-size-small);
+    }
+
+    #hero {
+        padding-top:var(--padding-vhigh);
+    }
+
+    .hero__box {
+        font-size: var(--font-size-small);
+        margin: 0 auto;
+        max-width: 650px;
+        position:static;
+        padding: var(--padding-xsmall);
+        text-align: center;
+    }
+    
+    .hero__box h1 {
+        margin-bottom: var(--padding-small);
+    }
+
+    .carousel-item img{
+        max-width: 100%;
+    }
+
+    .titulo {
+        font-size: var(--font-size-high);
+        text-decoration: underline var(--color-contrast);
+        padding: var(--padding-small) 0;
+    }
+
+
+
+
+
+    .intro {
+        flex-flow: column wrap;
+        padding: var(--padding-xsmall);
+    }
+
+    .intro__img img {
+        min-width: 300px;
+    }
+    
+    .servicios__container {
+        flex-flow: column wrap;
+        gap: var(--padding-small);
+        padding: var(--padding-xsmall);
+    }
+    
+    .servicios__title {
+        text-align: center;
+    }
+
+    .servicios__box h1 {
+        font-size: var(--font-size-small);
+    }
+    
+    .servicios__box p {
+        font-size: var(--font-size-xsmall);
+    }
+
+    .artistas {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .artistas img {
+        display: block;
+        margin: 0 auto;
+        max-width: 400px;
+    }
+
+    .artistas .artista__textoUno h1,
+    .artistas .artista__textoDos h1{
+        font-size: var(--font-size-small);
+        padding-bottom: var(--padding-xsmall) ;
+        text-decoration: underline var(--color-contrast);
+    }
+    
+    .artistas .artista__textoUno p,
+    .artistas .artista__textoDos p{
+        color: var(--color-middle);
+        font-family: var(--font-text);
+        font-size: var(--font-size-xsmall);
+        line-height: 1.5;
+    }
+
+    .container__galeria {
+        flex-flow: column wrap;
+        
+    }
+
+    .galeria__img {
+        max-width: 100%;
+    }
+
+    .piercingsServicio{
+        margin: 0 auto;
+        max-width: 90%;
+    }
+
+    .piercing__img {
+        margin: 0 auto;
+    }
+
+    .piercing__varios{
+        max-width: 80%;
+    }
+
+    .catalogoPiercing {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .catalogo__texto {
+        font-size: var(--font-size-xsmall);
+    }
+
+    .catalogo__img {
+        max-width: 300px;
+    }
+
+    /* */
+    .faq {
+        font-size: var(--font-size-xsmall);
+    }
+    
+    .faq__preguntas {
+        padding-bottom: var(--padding-high);
+    }
+    
+    .faq__title {
+        font-size: var(--font-size-mid);
+        padding-bottom: var(--padding-mid);
+    }
+    
+    .faq div p {
+        padding: var(--padding-small) 0;
+        line-height: 1.5;
+    }
+    
+    form {
+        font-size: var(--padding-small);
+    }
+    
+    legend {
+        font-size: var(--font-size-xsmall);
+        margin-bottom: var(--padding-small);
+    }
+    
+    input {
+        min-width: 80%;
+    }
+    
+    label {
+        font-size: 1.6rem;
+        font-weight: bold;
+    }
+    
+    textarea {
+        display: block;
+        margin: var(--padding-small) auto;
+        min-width: 80%;
+        padding: 0.5em;
+        resize: none;
+    }
+    /* */
+    
+    footer h3,
+    footer p,
+    footer a {
+        font-size: var(--font-size-xsmall);
+        padding-bottom: var(--padding-xsmall);
+    }
+
+
 }
 
-form {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-top: 3rem;
-    text-align: center;
-}
 
-legend {
-    margin: 1rem;
-}
+@media (min-width: 801px) and (max-width: 1200px) {
+    
+    .navbar-nav {
+        font-size: var(--font-size-small);
+    }
 
-textarea {
-    display: block;
-    margin: 1rem auto 3rem;
-    width: 40%;
-    resize: none;
-}
+    #hero {
+        padding:var(--padding-vhigh) 0 var(--padding-vhigh);
+    }
 
-fieldset {
-    margin-bottom: 3rem;
-}
+    .hero__box {
+        font-size: var(--font-size-mid);
+        margin: 0 auto;
+        max-width: 650px;
+        position: static;
+        padding: var(--padding-small);
+        text-align: center;
+    }
+    
 
-label {
-    display: block;
 
-}
 
-.btn {
-    border: none;
-    border-radius: 40px;
-    background-color: #282726;
-    color: #dfe2e3;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 1.25rem;
-    margin: 1rem;
-    padding: 0.5em 2em;
-}
 
-.btn:hover {
-    background-color: #86817c;
-    color: #282726;
-}
+    .intro {
+        flex-flow: column wrap;
+        padding: var(--padding-xsmall);
+    }
 
-input {
-    display: block;
-    font-family: 'Cinzel', serif;
-    margin: 1rem auto;
-    padding: 0.5em;
-    width: 40%;
-}
+    .artistas {
+        display: flex;
+        flex-flow: column wrap;
+    }
 
-/**************** Footer ****************/
+    .artistas img {
+        display: block;
+        margin: 0 auto;
+        max-width: 450px;
+    }
 
-#footer {
-    background-color: #282726;
-    color: #dfe2e3;
-    padding: 2rem;
-    text-align: center;
-}
+    .artistas .artista__textoUno h1,
+    .artistas .artista__textoDos h1{
+        font-size: var(--font-size-mid);
+        padding-bottom: var(--padding-xsmall) ;
+        text-decoration: underline var(--color-contrast);
+    }
+    
+    .artistas .artista__textoUno p,
+    .artistas .artista__textoDos p{
+        color: var(--color-middle);
+        font-family: var(--font-text);
+        font-size: var(--font-size-small);
+        line-height: 1.25;
+    }
 
-#footer a {
-    color: #dfe2e3;
-    display: inline-block;
-    text-decoration: none;
-    padding: 1rem;
-}
+    .galeria__img {
+        max-width: 35%;
+    }
 
-#footer a:visited {
-    color: #dfe2e3;
-}
+    .piercing__texto {
+        font-size: var(--font-size-xsmall);
+    }
 
-.footer__info {
-    border: 2px solid #86817c;
-    margin: 0 auto;
-    padding: 2rem;
-    width: 50%;
+    .catalogoPiercing {
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    .catalogo__img {
+        padding-bottom: var(--padding-xsmall);
+    }
+    .catalogo__texto {
+        font-size: var(--font-size-xsmall);
+    }
 }

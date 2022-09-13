@@ -6,32 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">  
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styles2.css">
     <title>QUIENES SOMOS</title>
 </head>
-<body>
-    
-    <header id="header">
-        <h1 class="h1">OZZI</h1>
-        <ul class="header__ul">
-            <li><a href="../index.html">HOME</a></li>
-            <li><a href="./galeria.html" >GALERIA</a></li>
-            <li><a href="./about.html" class="active">NOSOTROS</a></li>
-            <li><a href="./piercings.html">PIERCINGS</a></li>
-            <li><a href="./contacto.html">CONTACTO</a></li>
-        </ul>
-    </header>
 
-    <div id="hero">
+<body class="container-fluid">
+    
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg row">
+
+        <div class="container-fluid">
+
+            <div>
+                <a class="brand ps-5" href="#">OZZI</a>
+            </div>
+
+            <button class="navbar-toggler blanco" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon blanco"></span>
+            </button>
+
+            <div class="collapse navbar-collapse ms-5 underline" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link" href="../index.html">HOME</a>
+                <a class="nav-link" href="./galeria.html">TATUAJES</a>
+                <a class="nav-link" href="./piercings.html">PIERCINGS</a>
+                <a class="nav-link active" aria-current="page" href="./about.html">NOSOTROS</a>
+                <a class="nav-link" href="./contacto.html">CONTACTO</a>
+              </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero">
         <div class="hero__box">
             <div>
-                <h1 class="h2">NOSOTROS</h1>
+                <h1 class="hero__title">NOSOTROS</h1>
                 <p>Nuestra vida a lo largo de nuestros <br>
                    diseños, trabajos y experiencias.
                 </p>
             </div>
         </div>
-    </div>
+    </section>
 
     <main>
         <section class="artistas">
@@ -58,24 +73,32 @@
         </h2>
     </main>
 
-    <footer id="footer">
+    <footer id="footer" class="container-fluid">
 
-        <div>
-            <h3>REGLAS</h3>
-            <p>Menores de 18 años solo con autorización firmada de los padres.</p>
+        <div class="row">
+
+            <div class="col-sm-12 col-md-4 px-3">
+                <h3>REGLAS</h3>
+                <p>Menores de 18 años solo con autorización firmada de los padres.</p>
+            </div>
+
+            <div class="col-sm-12 col-md-4 px-3">
+                <h3>ESCRIBINOS</h3>
+                <a href="#">Instagram</a>
+                <a href="#">Whatsapp.me</a>
+                <p>Telefono: 0303456</p>
+            </div>
+
+            <div class="col-sm-12 col-md-4 px-3">
+                <h3>UBICACIÓN</h3>
+                <a href="https://www.google.com/maps/place/Espa%C3%B1a+200-238,+Alta+Gracia,+C%C3%B3rdoba/@-31.6593095,-64.4360483,17z/data=!3m1!4b1!4m8!1m2!2m1!1sgoogle+map+ubicacion!3m4!1s0x942d573526288121:0x8bbb496a3caa5113!8m2!3d-31.6593137!4d-64.4315635">España 210</a> <!-- Link a GOOGLE map con la ubicacion -->
+            </div>
         </div>
 
-        <div class="footer__info">
-            <h3 >ESCRIBINOS</h3>
-            <a href="#">Instagram</a>
-            <a href="#">Whatsapp.me</a>
-            <p>Telefono: 0303456</p>
-        </div>
-
-        <div>
-            <h3>UBICACIÓN</h3>
-            <a href="https://www.google.com/maps/place/Espa%C3%B1a+200-238,+Alta+Gracia,+C%C3%B3rdoba/@-31.6593095,-64.4360483,17z/data=!3m1!4b1!4m8!1m2!2m1!1sgoogle+map+ubicacion!3m4!1s0x942d573526288121:0x8bbb496a3caa5113!8m2!3d-31.6593137!4d-64.4315635">España 210</a> <!-- Link a GOOGLE map con la ubicacion -->
-        </div>
     </footer>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
 </body>
 </html>
