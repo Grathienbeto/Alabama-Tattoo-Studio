@@ -108,9 +108,53 @@ body {
     margin: 0 !important;
     padding: 0 !important;
     width: 100% !important;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
+/***** INDEX *****/
+/* intro */
+.intro {
+    font-family: var(--font-titles);
+    padding: var(--padding-small);
+}
+
+.intro h1 {
+    color: var(--color-dark);
+    font-size: var(--font-size-high);
+}
+
+.intro p {
+    color: var(--color-middle);
+    font-size: var(--font-size-mid);
+    line-height: 1.2;
+}
+
+.intro__img {
+    min-width: 600px;
+    height: auto;
+}
+
+/* servicios */
+.servicios__container {
+    background-color: var(--color-dark);
+}
+
+.servicios__box {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    font-size: var(--font-size-xsmall);
+    font-family:var(--font-titles);
+}
+
+.servicios__box h1,
+.servicios__title {
+    font-family: var(--font-titles);
+    text-decoration: underline var(--color-contrast);
+}
+
+.servicios__title {
+    font-size: var(--font-size-high);
+}
 /***** GALERIA TATUAJES *****/
 
 .body-galeria {
@@ -134,11 +178,11 @@ body {
 
 .carousel-item img{
     margin: auto;
-    max-width: 40%;
+    max-width: 35%;
     max-height: auto;
 }
 
-
+/***** FOOTER *****/
 footer {
     background-color: var(--color-dark);
     border-top: 4px solid var(--color-contrast);
@@ -149,6 +193,11 @@ footer {
     line-height: 2;
     padding: var(--padding-high);
     text-align: center;
+}
+
+footer a {
+    color: var(--color-light);
+    text-decoration: none;
 }
 
 footer a:visited {
@@ -195,18 +244,23 @@ footer h3 {
         padding: var(--padding-small) 0;
     }
 
-
-
-
-
-    .intro {
-        flex-flow: column wrap;
-        padding: var(--padding-xsmall);
+    .intro h1,
+    .intro p {
+        font-size: var(--font-size-small);
     }
 
-    .intro__img img {
-        min-width: 300px;
+    footer h3,
+    footer p,
+    footer a {
+        font-size: var(--font-size-xsmall);
+        padding-bottom: var(--padding-xsmall);
     }
+    
+
+    .intro__text {
+        font-size: var(--font-size-xsmall);
+    }
+    /*******/
     
     .servicios__container {
         flex-flow: column wrap;
@@ -331,15 +385,6 @@ footer h3 {
         padding: 0.5em;
         resize: none;
     }
-    /* */
-    
-    footer h3,
-    footer p,
-    footer a {
-        font-size: var(--font-size-xsmall);
-        padding-bottom: var(--padding-xsmall);
-    }
-
 }
 
 
@@ -361,15 +406,13 @@ footer h3 {
         padding: var(--padding-small);
         text-align: center;
     }
-    
 
-
-
-
-    .intro {
-        flex-flow: column wrap;
-        padding: var(--padding-xsmall);
+    .intro h1,
+    .intro p {
+        font-size: var(--font-size-mid);
     }
+
+    /*******/
 
     .artistas {
         display: flex;
