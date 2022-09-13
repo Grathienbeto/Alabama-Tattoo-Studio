@@ -10,7 +10,7 @@
     <title>PIERCINGS</title>
 </head>
 
-<body class="container-fluid">
+<body class="container-fluid dark-bg">
     
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg row px-3">
@@ -46,84 +46,131 @@
          </div>
     </section>
 
-    <main id="piercing">
+    <section class="piercingsServicio row mt-5 pt-5 mx-auto">
 
-        <div class="piercingsServicio">
+        <h1 class="titulo catalogo__title">SERVICIOS</h1>
 
-            <div class="piercing__varios">
-                <img src="../images/piercing-1.jpg" class="piercing__img" alt="">
-                <p class="piercing__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis suscipit accusantium, unde sit hic?</p>
+        <div class="piercing__varios col-sm-12 col-md-12 col-lg-4 col-xxl-4">
+            <img src="../images/piercing-1.jpg" class="piercing__img img-fluid" alt="">
+            <p class="piercing__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis suscipit accusantium, unde sit hic?</p>
+        </div>
+
+        <div class="piercing__varios col-sm-12 col-md-12 col-lg-4 col-xxl-4">
+            <img src="../images/piercing-2.jpg" class="piercing__img img-fluid" alt="">
+            <p class="piercing__texto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt commodi cupiditate pariatur in suscipit eveniet iusto accusamus atque, praesentium neque?</p>
+        </div>
+
+        <div class="piercing__varios col-sm-12 col-md-12 col-lg-4 col-xxl-4">
+            <img src="../images/piercing-3.jpg" class="piercing__img img-fluid" alt="">
+            <p class="piercing__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum similique tenetur eligendi dignissimos. Nam, in?</p>
+        </div>
+
+    </section>
+
+
+    <article class="row gal_tatuaje">
+
+        <h1 class="col-12 text-center titulo">GALERIA</h1>
+
+        <div id="carouselExampleControls" class="carousel slide gal-tatuaje col-12" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item piercing-galeria active">
+                    <img src="../images/piercing-1.jpg" class="d-block w-50" alt="...">
+                </div>
+                <div class="carousel-item piercing-galeria">
+                    <img src="../images/piercing-2.jpg" class="d-block w-50" alt="...">
+                </div>
+                <div class="carousel-item piercing-galeria">
+                    <img src="../images/piercing-4.jpg" class="d-block w-50" alt="...">
+                </div>
+                <div class="carousel-item piercing-galeria">
+                    <img src="../images/piercing-5.jpg" class="d-block w-50" alt="...">
+                </div>
+                <div class="carousel-item piercing-galeria">
+                    <img src="../images/piercing-6.jpg" class="d-block w-50" alt="...">
+                </div>
+                
             </div>
-            <div class="piercing__varios">
-                <img src="../images/piercing-2.jpg" class="piercing__img" alt="">
-                <p class="piercing__texto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt commodi cupiditate pariatur in suscipit eveniet iusto accusamus atque, praesentium neque?</p>
-            </div>
-            <div class="piercing__varios">
-                <img src="../images/piercing-3.jpg" class="piercing__img" alt="">
-                <p class="piercing__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum similique tenetur eligendi dignissimos. Nam, in?</p>    
+
+            <button class="carousel-control-prev boton-galeria-izq" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next boton-galeria-der" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="pb-5"></div>
+
+    </article>
+
+    <article class="row px-2 mx-auto catalogo_container">
+        <h1 class="catalogo__title">Catalogo</h1>
+
+        <div class="card col-sm-12 col-md-6 col-lg-4 p-3">
+            <img src="../images/joyeria-1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h1>Aro</h1>
+                <p class="card-text">Descripcion del aro</p>
+                <p class="card-text">$1000 </p>
             </div>
         </div>
 
-        <h1>Cuando sepa hacer un carrousel, va a ir aca</h1>
-        <article class="galeria-piercing">
-
-            <h1>Galeria de piercings</h1>
-            <div class="container-general">
-                <img src="../images/piercing-1.jpg" alt="" class="galeriaImg">
-                <img src="../images/piercing-2.jpg" alt="" class="galeriaImg">
-                <img src="../images/piercing-3.jpg" alt="" class="galeriaImg">
+        <div class="card col-sm-12 col-md-6 col-lg-4 p-3">
+            <img src="../images/joyeria-3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h1>Aro</h1>
+                <p class="card-text">Descripcion del aro</p>
+                <p class="card-text">$1000 </p>
             </div>
-        </article>
+        </div>
 
-
-
-        <article>
-
-            <h1 class="catalogo__title">Catalogo</h1>
-
-            <div class="catalogoPiercing">
-
-                <div class="catalogo__texto">
-                    <img src="../images/joyeria-1.jpg" class="catalogo__img" alt="">
-                    <h1>ARO</h1>
-                    <p>Descripcion del aro y el material</p>
-                    <h3>$1000</h3>
-                </div>
-                <div class="catalogo__texto">
-                    <img src="../images/joyeria-3.jpg" class="catalogo__img" alt="">
-                    <h1>ARO</h1>
-                    <p>Descripcion del aro y el material</p>
-                    <h3>$1000</h3>
-                </div>
-                <div class="catalogo__texto">
-                    <img src="../images/joyeria-1.jpg" class="catalogo__img" alt="">
-                    <h1>ARO</h1>
-                    <p>Descripcion del aro y el material</p>
-                    <h3>$1000</h3>
-                </div>
-                <div class="catalogo__texto">
-                    <img src="../images/joyeria-4.jpg" class="catalogo__img" alt="">
-                    <h1>ARO</h1>
-                    <p>Descripcion del aro y el material</p>
-                    <h3>$1000</h3>
-                </div>
-                <div class="catalogo__texto">
-                    <img src="../images/joyeria-2.jpg" class="catalogo__img" alt="">
-                    <h1>ARO</h1>
-                    <p>Descripcion del aro y el material</p>
-                    <h3>$1000</h3>
-                </div>
-                <div class="catalogo__texto">
-                    <img src="../images/joyeria-4.jpg" class="catalogo__img" alt="">
-                    <h1>ARO</h1>
-                    <p>Descripcion del aro y el material</p>
-                    <h3>$1000</h3>
+        <div class="card col-sm-12 col-md-6 col-lg-4 p-3">
+            <img src="../images/joyeria-4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h1>Aro</h1>
+                <p class="card-text">Descripcion del aro</p>
+                <p class="card-text">$1000 </p>
             </div>
+        </div>
 
+        <div class="card col-sm-12 col-md-6 col-lg-4 p-3">
+            <img src="../images/joyeria-2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h1>Aro</h1>
+                <p class="card-text">Descripcion del aro</p>
+                <p class="card-text">$1000 </p>
+            </div>
+        </div>
 
+        <div class="card col-sm-12 col-md-6 col-lg-4 p-3">
+            <img src="../images/joyeria-4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h1>Aro</h1>
+                <p class="card-text">Descripcion del aro</p>
+                <p class="card-text">$1000 </p>
+            </div>
+        </div>
 
-        </article>
-    </main>
+        <div class="card col-sm-12 col-md-6 col-lg-4 p-3">
+            <img src="../images/joyeria-1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h1>Aro</h1>
+                <p class="card-text">Descripcion del aro</p>
+                <p class="card-text">$1000 </p>
+            </div>
+        </div>
+
+        <div class="card col-sm-12 col-md-6 col-lg-4 p-3">
+            <img src="../images/joyeria-2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h1>Aro</h1>
+                <p class="card-text">Descripcion del aro</p>
+                <p class="card-text">$1000 </p>
+            </div>
+        </div>
+    </article>
 
     <footer id="footer" class="container-fluid">
 

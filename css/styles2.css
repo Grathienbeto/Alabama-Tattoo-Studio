@@ -292,6 +292,47 @@ textarea {
     opacity: 0.95;
 }
 
+/***** PIERCINGS *****/
+
+.dark-bg {
+    background-color: var(--color-dark);
+    color: var(--color-light)
+}
+.piercingsServicio {
+    width: 95%;
+}
+
+.piercing__img {
+    border: 2px solid var(--color-light);
+    margin-bottom: var(--padding-small);
+}
+
+.piercing__texto {
+    font-size: var(--font-size-xsmall);
+    font-family: var(--font-titles);
+}
+
+.catalogo_container {
+    max-width: 80%;
+}
+
+.catalogo__title {
+    font-family: var(--font-titles);
+    font-size: var(--font-size-vhigh);
+    text-decoration: underline var(--color-contrast);
+    text-align: center;
+    margin-top: var(--padding-high);
+}
+
+.card {
+    background-color: var(--color-dark);
+    font-family: var(--font-titles);
+}
+
+.card div p {
+    font-size: var(--font-size-xsmall);
+}
+
 /***** FOOTER *****/
 footer {
     background-color: var(--color-dark);
@@ -420,14 +461,17 @@ footer h3 {
     .faq div p {
         font-size: var(--font-size-xsmall);
     }
-    /***********************/
+
+    .catalogo_container {
+        max-width: 100%;
+    }
     
     .piercingsServicio{
         margin: 0 auto;
-        max-width: 90%;
+        max-width: 100%;
     }
 
-    .piercing__img {
+    .piercing__varios {
         margin: 0 auto;
     }
 
@@ -446,12 +490,10 @@ footer h3 {
 
     .catalogo__img {
         max-width: 300px;
+    } 
+    .piercing-galeria{
+        max-width: 400px !important;
     }
-
-    /* */
-
-    
-    /* */
 
     
     legend {
@@ -514,17 +556,17 @@ footer h3 {
     .galeria__img {
         max-width: 35%;
     }
+
+    .piercing__varios {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .titulo {
+        text-align: center;
+    }
+
     /*******/
-
-
-
-    .gal_tatuaje {
-        margin: 0;
-    }
-
-    .piercing__texto {
-        font-size: var(--font-size-xsmall);
-    }
 
     .catalogoPiercing {
         grid-template-columns: repeat(2, 2fr);
