@@ -121,6 +121,7 @@ body {
 .intro h1 {
     color: var(--color-dark);
     font-size: var(--font-size-high);
+    text-decoration: underline var(--color-contrast) !important;
 }
 
 .intro p {
@@ -154,6 +155,32 @@ body {
 
 .servicios__title {
     font-size: var(--font-size-high);
+}
+
+/* artistas */
+.artistas {
+    width: 90%;
+}
+.artistas div img {
+    min-width: 350px !important;
+    max-width: 600px !important;
+    display: block;
+    margin: 0 auto;
+}
+
+.artista__texto {
+    font-family: var(--font-titles);
+    font-size: var(--font-size-xsmall);
+}
+
+.artista__texto h1{
+    color: var(--color-dark);
+    font-size: var(--font-size-small);
+    text-decoration: underline var(--color-contrast);
+}
+
+.artista__texto p{
+    color: var(--color-middle);
 }
 /***** GALERIA TATUAJES *****/
 
@@ -256,12 +283,10 @@ footer h3 {
         padding-bottom: var(--padding-xsmall);
     }
     
-
     .intro__text {
         font-size: var(--font-size-xsmall);
     }
-    /*******/
-    
+
     .servicios__container {
         flex-flow: column wrap;
         gap: var(--padding-small);
@@ -280,41 +305,27 @@ footer h3 {
         font-size: var(--font-size-xsmall);
     }
 
-    .artistas {
-        display: flex;
-        flex-flow: column wrap;
-    }
-
     .artistas img {
         display: block;
         margin: 0 auto;
-        max-width: 400px;
+        max-width: 350px;
     }
 
-    .artistas .artista__textoUno h1,
-    .artistas .artista__textoDos h1{
-        font-size: var(--font-size-small);
-        padding-bottom: var(--padding-xsmall) ;
-        text-decoration: underline var(--color-contrast);
-    }
-    
-    .artistas .artista__textoUno p,
-    .artistas .artista__textoDos p{
-        color: var(--color-middle);
-        font-family: var(--font-text);
+    .artista__texto {
         font-size: var(--font-size-xsmall);
-        line-height: 1.5;
+        padding-bottom: var(--padding-xsmall) ;
     }
 
-    .container__galeria {
-        flex-flow: column wrap;
-        
+    .artista__texto h1 {
+        text-align: center;
+        font-weight: bold;
     }
 
     .galeria__img {
         max-width: 100%;
     }
-
+    /***********************/
+    
     .piercingsServicio{
         margin: 0 auto;
         max-width: 90%;
@@ -412,34 +423,20 @@ footer h3 {
         font-size: var(--font-size-mid);
     }
 
+    .artistas {
+        padding: var(--font-size-high) 0 !important;
+        width: 80%;
+    }
+
+    .artista__foto {
+        display: block;
+        min-width: 450px;
+        max-width: 600px !important;
+    }
     /*******/
 
-    .artistas {
-        display: flex;
-        flex-flow: column wrap;
-    }
 
-    .artistas img {
-        display: block;
-        margin: 0 auto;
-        max-width: 450px;
-    }
-
-    .artistas .artista__textoUno h1,
-    .artistas .artista__textoDos h1{
-        font-size: var(--font-size-mid);
-        padding-bottom: var(--padding-xsmall) ;
-        text-decoration: underline var(--color-contrast);
-    }
     
-    .artistas .artista__textoUno p,
-    .artistas .artista__textoDos p{
-        color: var(--color-middle);
-        font-family: var(--font-text);
-        font-size: var(--font-size-small);
-        line-height: 1.25;
-    }
-
     .galeria__img {
         max-width: 35%;
     }
