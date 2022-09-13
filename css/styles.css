@@ -1,101 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap');
 
 :root {
+    /* PALETA DE COLORES */
     --color-dark: #282726;
     --color-middle: #777472fd;
     --color-light: #dfe2e3;
     --color-contrast: #b56e20;
 
+    /* FUENTES */
     --font-titles: 'Bebas Neue';
     --font-text:'Roboto', monospace;
 
-    --font-size-vhigh: 8.5rem;
+    /* TAMAÑO DE LETRA*/
+    --font-size-vhigh: 7rem;
     --font-size-high: 5rem;
-    --font-size-mid: 3.0rem;
+    --font-size-mid: 3.5rem;
     --font-size-small: 2.5rem;
     --font-size-xsmall: 1.75rem;
 
-    --padding-vhigh: 7.5rem;
+    /* TAMAÑO DE SEPARACION*/
+    --padding-vhigh: 7rem;
     --padding-high: 5rem;
-    --padding-mid: 4rem;
-    --padding-small: 3rem;
-    --padding-xsmall: 1.5rem;
+    --padding-mid: 3.5rem;
+    --padding-small: 2rem;
+    --padding-xsmall: 1rem;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    font-size: 62.5%;
-    font-family: var(--font-text);
-}
-
-.h1 {
-    font-size: var(--font-size-high);
-    font-weight: bold;
-}
-
-.h2 {
-    font-size: var(--font-size-vhigh);
-    font-weight: bold;
-}
-
-ul, li {
-    list-style: none;
-    text-decoration: none;
-}
-
-a {
-    text-decoration: none !important; 
-}
-
-img {
-    width: 100%;
-}
-
-.active {
-    color: var(--color-contrast) !important;
-}
-
-/* HEADER */
-
-header {
+/***** NAV *****/
+nav {
     background-color: var(--color-dark);
-    border-bottom: 3px solid var(--color-contrast) ;
+    border-bottom: 4px solid var(--color-contrast) ;
     color: var(--color-light);
     font-family: var(--font-titles);
     font-size: var(--font-size-mid);
-    padding: var(--padding-small);
-
-    display: flex;
-    flex-flow: row wrap;
-    justify-content:space-between;
-    align-items: center;
+    margin: 0 !important;
 }
 
-.header__ul {
-    display: flex;
-    flex-flow: row wrap;
-    gap: var(--padding-mid);
+nav a {
+    color: var(--color-light);
 }
 
-header a {
-    color: var(--color-light)
+nav a:visited {
+    color: var(--color-light) !important ;
 }
 
-header a:visited {
-    color: var(--color-light)
+.brand {
+    font-size: var(--font-size-high);
+    text-decoration: none;
+}
+
+.blanco {
+    border: var(--color-light);
+    background-color: var(--color-light) ;
 }
 
 /* este hover y su animacion son robo jaja, queria una animacion linda pero no las manejo todavia*/
-header a:hover {
+.underline a:hover {
     display: inline-block;
     position: relative;
 } 
-header a:after {
+.underline a:after {
     content: '';
     position: absolute;
     width: 100%;
@@ -107,17 +71,17 @@ header a:after {
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
-header a:hover:after {
+.underline a:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
 
-
-/* HERO */
+/***** HERO *****/
 #hero {
     background-color: var(--color-dark);
     background-image: url(../images/imagen-fondo.jpg);
     background-repeat: no-repeat;
+    border-bottom: 4px solid var(--color-contrast);
     height: 90vh;
     z-index: 0;
 }
@@ -128,46 +92,37 @@ header a:hover:after {
     border-radius: 25px;
     color: var(--color-light);
     font-family: var(--font-titles);
-    font-size: var(--font-size-high);
-    letter-spacing: 0.5rem;
-    position: absolute;
+    font-size: var(--font-size-mid);
+    letter-spacing: 0.25rem;
     padding: var(--padding-mid);
-    right: 15%;
+    position: absolute;
+    right: 5%;
     top: 40%;
 }
 
-.hero__box h1 {
-    margin-bottom: var(--padding-small);
+.hero__title {
+    font-size: var(--font-size-high);
 }
 
-/* MAIN */
 body {
-    background-color: var(--color-light) !important;
+    background-color: var(--color-light) ;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important; 
+    overflow-x: hidden !important;
 }
 
-main {
-    margin: var(--padding-high) auto;
-    padding-top: var(--padding-vhigh);
-    width: 90%;
-}
-
-/*** MAIN INDEX ***/
-
-    /* Intro */
+/***** INDEX *****/
+/* intro */
 .intro {
     font-family: var(--font-titles);
-    padding: var(--padding-high);
-
-    display: flex;
-    flex: row wrap;
-    gap: var(--padding-mid);
-    justify-content: space-evenly;
-    align-items: center;
+    padding: var(--padding-small);
 }
 
 .intro h1 {
     color: var(--color-dark);
     font-size: var(--font-size-high);
+    text-decoration: underline var(--color-contrast) !important;
 }
 
 .intro p {
@@ -176,273 +131,212 @@ main {
     line-height: 1.2;
 }
 
-.intro__text {
-    flex: 1 1;
-}
-
 .intro__img {
-    flex: 1.2 1;
-    min-width: 300px;
+    min-width: 600px;
+    height: auto;
 }
 
-    /* Servicios*/
-.servicios__title{
-    font-family: var(--font-titles);
-    font-size: var(--font-size-high);
-    padding: var(--font-size-mid) 0;
-}
-
+/* servicios */
 .servicios__container {
     background-color: var(--color-dark);
-    color: var(--color-light);
-    display: flex;
-    font-family: var(--font-text);
-    padding: var(--padding-mid) var(--padding-small);
-
-    flex-flow: row no-wrap;
-    justify-content: space-around;
-    gap: var(--padding-xsmall);
 }
 
-.servicios__box h1 {
-    font-size: var(--font-size-mid);
-    padding-bottom: var(--padding-xsmall);
+.servicios__box {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    font-size: var(--font-size-xsmall);
+    font-family:var(--font-titles);
+}
+
+.servicios__box h1,
+.servicios__title {
+    font-family: var(--font-titles);
     text-decoration: underline var(--color-contrast);
 }
 
-.servicios__box p {
-    font-size: var(--font-size-small);
-}
-
-    /* Artistas */
-.artistas {
-    margin-top: var(--padding-high);
-    padding-top: var(--padding-high);
-    display: grid;
-    grid-template-areas: 
-    "fotoUno fotoUno textoUno textoUno"
-    "textoDos textoDos fotoDos fotoDos"
-    ;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(2, 4fr);
-    row-gap: var(--padding-vhigh);
-}
-
-.artistas .artista__textoUno h1,
-.artistas .artista__textoDos h1{
-    color: var(--color-dark);
-    font-family: var(--font-text);
-    font-size: var(--font-size-mid);
-    padding-bottom: var(--padding-xsmall) ;
-    text-decoration:underline var(--color-contrast);
-}
-
-.artistas .artista__textoUno p,
-.artistas .artista__textoDos p{
-    color: var(--color-middle);
-    font-family: var(--font-text);
-    font-size: var(--font-size-small);
-    line-height: 1.5;
-}
-
-.artista__foto {
-    min-width: 275px;
-    max-width: 600px;
-}
-
-.artista__fotoUno {
-    grid-column: 2 /5;
-}
-
-.artista__textoUno{
-    grid-column: 6 / 12;
-}
-
-.artista__fotoDos {
-    grid-row: 2/4;
-    grid-column: 9 / 12;
-}
-
-.artista__textoDos {
-    grid-row: 2/4;    
-    grid-column: 2 / 8;
-}
-
-
-/*** MAIN GALERIA ***/
-
-.container__galeria {
-    display: flex;
-    flex-flow: row wrap;
-    gap: var(--padding-small);
-    justify-content: space-evenly;
-    margin: var(--padding-vhigh) 0;
-}
-
-.galeria__img {
-    max-width: 25%;
-    border-radius: 25px;
-    box-shadow: 5px 7px 20px rgba(1,1,1,0.8);
-    transition: all 0.5s ease-in-out;
-}
-/***************************************************/
-.galeria__img:hover {
-   max-width: 28%;
-   opacity: 0.8;
-   transition: all 0.5s ease-in-out;
-   cursor: pointer;
-}
-/***************************************************/
-
-/*** MAIN PIERCINGS ***/
-
-.piercingsServicio {
-    display: flex;
-    gap: var(--padding-small);
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-}
-
-.piercing__varios {
-    max-width: 30%;
-}
-
-.piercing__img {
-    display: block;
-    border-radius: 25px;
-    box-shadow: 5px 7px 20px rgba(1,1,1,0.8);
-}
-
-.piercing__texto {
-    color: var(--color-middle);
-    font-family: var(--font-text);
-    font-size: var(--font-size-small); 
-    padding-top: var(--padding-mid);
-}
-
-.catalogo__texto h1,
-.catalogo__texto p,
-.catalogo__texto h3 {
-    padding: 0.5rem 0 ;
-}
-
-.galeriaImg{
-    max-width: 10%;
-} /* sacar cuando ponga el carrousel, es para q las imagenes no sean gigantes*/
-
-.catalogo__title {
+.servicios__title {
     font-size: var(--font-size-high);
-    font-family: var(--font-titles);
-    padding:var(--padding-vhigh) 0;
 }
 
-.catalogoPiercing {
-    display: grid;
-    grid-template-columns: repeat(3, 4fr);
-    grid-template-rows: repeat(2,1fr);
-    gap: var(--padding-mid);
+/* artistas */
+.artistas {
+    width: 90%;
 }
-
-.catalogo__texto {
-    text-align: center;
-    font-family: var(--font-text);
-    font-size: var(--font-size-small);
-    padding-top: var(--padding-xsmall);
-}
-
-.catalogo__img {
-    display: inline-block;
-    padding-bottom: var(--padding-mid);
-}
-
-/*** MAIN FAQ ***/
-
-.overflow {
-    overflow-x: hidden;
-}
-
-.faq {
-    font-family: var(--font-text);
-    font-size: var(--font-size-mid);
+.artistas div img {
+    min-width: 350px !important;
+    max-width: 600px !important;
+    display: block;
     margin: 0 auto;
-    max-width: 1200px;
 }
 
-.faq__preguntas {
-    padding-bottom: var(--padding-vhigh);
+.artista__texto {
+    font-family: var(--font-titles);
+    font-size: var(--font-size-xsmall);
 }
+
+.artista__texto h1{
+    color: var(--color-dark);
+    font-size: var(--font-size-small);
+    text-decoration: underline var(--color-contrast);
+}
+
+.artista__texto p{
+    color: var(--color-middle);
+}
+/***** GALERIA TATUAJES *****/
+
+.body-galeria {
+    background-color: var(--color-dark);
+}
+
+.titulo {
+    color: var(--color-light);
+    font-family: var(--font-titles);
+    font-size: var(--font-size-vhigh);
+    text-decoration: underline var(--color-contrast);
+    padding: var(--padding-high) 0;
+}
+
+.gal_tatuaje {
+    background-color: var(--color-dark); 
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.boton-galeria-izq {
+    margin: 0;
+}
+
+.carousel-item img{
+    margin: auto;
+    max-width: 35%;
+    max-height: auto;
+}
+
+/***** CONTACTO *****/
 
 .faq__title {
     font-size: var(--font-size-high);
-    font-family: var(--font-text);
-    padding-bottom: var(--padding-high);
+    font-family: var(--font-titles);
+    text-decoration: underline var(--color-contrast);
+    padding:var(--padding-high) 0;
+}
+
+.faq {
+    font-family: var(--font-titles);
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.faq div h1 {
+    font-size: var(--font-size-small);
 }
 
 .faq div p {
-    padding: var(--padding-small) 0;
-    line-height: 1.5;
+    font-size: var(--font-size-xsmall);
+    color: var(--color-middle);
 }
 
 form {
-    font-family: var(--font-text);
-    font-size: var(--padding-small);
-    margin: 0 auto;
-    max-width: 900px;
+    font-family: var(--font-titles);
+    font-size: var(--padding-xsmall);
+    margin: var(--font-size-high) auto 0 !important;
+    max-width: 1000px;
     text-align: center;
 }
 
 legend {
     font-size: var(--font-size-small);
     font-weight: bold;
-    margin-bottom: var(--padding-mid);
+    margin-bottom: var(--padding-xsmall);
+    max-width: 60%;
+}
+
+label {
+    font-size: var(--font-size-xsmall);
+    font-weight: bold;
 }
 
 label,
 input {
     display: block;
-    margin: 0 auto;
+    margin: 2rem auto 0;
 }
 
 input {
-    font-family:var(--font-text);
-    font-size: var(--font-size-xsmall);
+    font-family:var(--font-titles);
+    font-size: 1.6rem;
     margin: var(--padding-xsmall) auto;
     min-width: 60%;
-    padding: 0.5em;
 }
 
-label {
-    font-size: 2rem;
-    font-weight: bold;
-    text-decoration: underline var(--color-contrast);
-}
 
 textarea {
     display: block;
     font-family: var(--font-text);
     margin: var(--padding-small) auto;
-    min-width: 60%;
-    padding: 0.5em;
+    max-width: 60% !important;
     resize: none;
 }
 
 .btn {
-    background-color: var(--color-dark);
+    background-color: var(--color-dark) !important;
+    border: 4px solid var(--color-dark) ;
     color: var(--color-light);
+    max-width: 60%;
 }
 
 .btn:hover {
-    background-color:var(--color-dark);
-    color: var(--color-contrast);
+    color: var(--color-light) !important;
+    border: 4px solid var(--color-contrast) !important;
+    opacity: 0.95;
 }
 
-.btn-small {
-    max-width: 30%;
+/***** PIERCINGS *****/
+
+.dark-bg {
+    background-color: var(--color-dark);
+    color: var(--color-light)
+}
+.piercingsServicio {
+    width: 95%;
 }
 
-/* FOOTER */
+.piercing__img {
+    border: 2px solid var(--color-light);
+    margin-bottom: var(--padding-small);
+}
+
+.piercing__texto {
+    font-size: var(--font-size-xsmall);
+    font-family: var(--font-titles);
+}
+
+.catalogo_container {
+    max-width: 80%;
+}
+
+.catalogo__title {
+    font-family: var(--font-titles);
+    font-size: var(--font-size-vhigh);
+    text-decoration: underline var(--color-contrast);
+    text-align: center;
+    margin-top: var(--padding-high);
+}
+
+.card {
+    background-color: var(--color-dark);
+    font-family: var(--font-titles);
+}
+
+.card div p {
+    font-size: var(--font-size-xsmall);
+}
+
+/***** FOOTER *****/
 footer {
     background-color: var(--color-dark);
+    border-top: 4px solid var(--color-contrast);
     color: var(--color-light);
     font-family: var(--font-text);
     font-size: var(--font-size-xsmall);
@@ -450,20 +344,11 @@ footer {
     line-height: 2;
     padding: var(--padding-high);
     text-align: center;
-
-    display: flex;
-    justify-content: space-evenly;
-    gap: var(--padding-small);
-}
-
-footer div {
-    flex: 1 1 clamp(200px, 30%, 300px);
 }
 
 footer a {
     color: var(--color-light);
-    display: inline-block;
-    padding-bottom: var(--padding-xsmall) ;
+    text-decoration: none;
 }
 
 footer a:visited {
@@ -476,21 +361,12 @@ footer h3 {
     padding-bottom: var(--padding-small);
 }
 
+
 @media screen and (max-width: 800px) {
-    header {
-        display: block;
-        font-size: var(--font-size-small) !important;
-        text-align: center;
-        padding: var(--padding-xsmall);
+    .navbar-nav {
+        font-size: var(--font-size-small);
     }
 
-    .header__ul {
-        display: flex;
-        justify-content: space-around;
-        flex-flow: row wrap;
-        gap: var(--padding-xsmall);
-    }
-    
     #hero {
         padding-top:var(--padding-vhigh);
     }
@@ -508,15 +384,32 @@ footer h3 {
         margin-bottom: var(--padding-small);
     }
 
-    .intro {
-        flex-flow: column wrap;
-        padding: var(--padding-xsmall);
+    .carousel-item img{
+        max-width: 100%;
     }
 
-    .intro__img img {
-        min-width: 300px;
+    .titulo {
+        font-size: var(--font-size-high);
+        text-decoration: underline var(--color-contrast);
+        padding: var(--padding-small) 0;
+    }
+
+    .intro h1,
+    .intro p {
+        font-size: var(--font-size-small);
+    }
+
+    footer h3,
+    footer p,
+    footer a {
+        font-size: var(--font-size-xsmall);
+        padding-bottom: var(--padding-xsmall);
     }
     
+    .intro__text {
+        font-size: var(--font-size-xsmall);
+    }
+
     .servicios__container {
         flex-flow: column wrap;
         gap: var(--padding-small);
@@ -535,47 +428,50 @@ footer h3 {
         font-size: var(--font-size-xsmall);
     }
 
-    .artistas {
-        display: flex;
-        flex-flow: column wrap;
-    }
-
     .artistas img {
         display: block;
         margin: 0 auto;
-        max-width: 400px;
+        max-width: 350px;
     }
 
-    .artistas .artista__textoUno h1,
-    .artistas .artista__textoDos h1{
-        font-size: var(--font-size-small);
-        padding-bottom: var(--padding-xsmall) ;
-        text-decoration: underline var(--color-contrast);
-    }
-    
-    .artistas .artista__textoUno p,
-    .artistas .artista__textoDos p{
-        color: var(--color-middle);
-        font-family: var(--font-text);
+    .artista__texto {
         font-size: var(--font-size-xsmall);
-        line-height: 1.5;
+        padding-bottom: var(--padding-xsmall) ;
     }
 
-    .container__galeria {
-        flex-flow: column wrap;
-        
+    .artista__texto h1 {
+        text-align: center;
+        font-weight: bold;
     }
 
     .galeria__img {
         max-width: 100%;
     }
 
-    .piercingsServicio{
-        margin: 0 auto;
-        max-width: 90%;
+    .faq__title {
+        font-size: var(--font-size-mid);
+        text-align: center;
+        padding-bottom: var(--padding-mid);
+    }
+    
+    .faq div h1 {
+        font-size: var(--font-size-small);
     }
 
-    .piercing__img {
+    .faq div p {
+        font-size: var(--font-size-xsmall);
+    }
+
+    .catalogo_container {
+        max-width: 100%;
+    }
+    
+    .piercingsServicio{
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .piercing__varios {
         margin: 0 auto;
     }
 
@@ -594,30 +490,11 @@ footer h3 {
 
     .catalogo__img {
         max-width: 300px;
+    } 
+    .piercing-galeria{
+        max-width: 400px !important;
     }
 
-    /* */
-    .faq {
-        font-size: var(--font-size-xsmall);
-    }
-    
-    .faq__preguntas {
-        padding-bottom: var(--padding-high);
-    }
-    
-    .faq__title {
-        font-size: var(--font-size-mid);
-        padding-bottom: var(--padding-mid);
-    }
-    
-    .faq div p {
-        padding: var(--padding-small) 0;
-        line-height: 1.5;
-    }
-    
-    form {
-        font-size: var(--padding-small);
-    }
     
     legend {
         font-size: var(--font-size-xsmall);
@@ -625,7 +502,8 @@ footer h3 {
     }
     
     input {
-        min-width: 80%;
+        padding: 0.3rem;
+        min-width: 100%;
     }
     
     label {
@@ -634,25 +512,18 @@ footer h3 {
     }
     
     textarea {
-        display: block;
-        margin: var(--padding-small) auto;
-        min-width: 80%;
-        padding: 0.5em;
+        min-width: 100%;
         resize: none;
-    }
-    /* */
-
-    footer {
-        flex-flow: column wrap;
-        gap: var(--padding-xsmall)
-    }
-    
-    footer h3 {
-        padding-bottom: var(--padding-xsmall);
     }
 }
 
+
 @media (min-width: 801px) and (max-width: 1200px) {
+    
+    .navbar-nav {
+        font-size: var(--font-size-small);
+    }
+
     #hero {
         padding:var(--padding-vhigh) 0 var(--padding-vhigh);
     }
@@ -661,49 +532,41 @@ footer h3 {
         font-size: var(--font-size-mid);
         margin: 0 auto;
         max-width: 650px;
-        position:static;
+        position: static;
         padding: var(--padding-small);
         text-align: center;
     }
-    
-    .intro {
-        flex-flow: column wrap;
-        padding: var(--padding-xsmall);
+
+    .intro h1,
+    .intro p {
+        font-size: var(--font-size-mid);
     }
 
     .artistas {
-        display: flex;
-        flex-flow: column wrap;
+        padding: var(--font-size-high) 0 !important;
+        width: 80%;
     }
 
-    .artistas img {
+    .artista__foto {
         display: block;
-        margin: 0 auto;
-        max-width: 450px;
-    }
-
-    .artistas .artista__textoUno h1,
-    .artistas .artista__textoDos h1{
-        font-size: var(--font-size-mid);
-        padding-bottom: var(--padding-xsmall) ;
-        text-decoration: underline var(--color-contrast);
-    }
-    
-    .artistas .artista__textoUno p,
-    .artistas .artista__textoDos p{
-        color: var(--color-middle);
-        font-family: var(--font-text);
-        font-size: var(--font-size-small);
-        line-height: 1.25;
+        min-width: 450px;
+        max-width: 600px !important;
     }
 
     .galeria__img {
         max-width: 35%;
     }
 
-    .piercing__texto {
-        font-size: var(--font-size-xsmall);
+    .piercing__varios {
+        max-width: 500px;
+        margin: 0 auto;
     }
+
+    .titulo {
+        text-align: center;
+    }
+
+    /*******/
 
     .catalogoPiercing {
         grid-template-columns: repeat(2, 2fr);
