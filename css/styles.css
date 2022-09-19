@@ -37,7 +37,7 @@ nav {
 }
 
 nav a {
-    color: var(--color-light);
+    color: var(--color-light) !important;
 }
 
 nav a:visited {
@@ -98,6 +98,8 @@ nav a:visited {
     position: absolute;
     right: 5%;
     top: 40%;
+    animation: movimiento 10s linear 0.3s infinite ;
+    max-width: 40%;
 }
 
 .hero__title {
@@ -111,6 +113,26 @@ body {
     width: 100% !important; 
     overflow-x: hidden !important;
 }
+/* HERO ANIMATION */
+
+@keyframes movimiento {
+    0%   {background-color:var(--color-middle); right: 5%; top:40%;}
+
+    25%  {background-color:var(--color-light); right:25%; top:40%;
+    color: var(--color-dark)}
+
+    50%  {background-color:var(--color-contrast); right:25%; top:20%;
+            color: var(--color-dark);
+            border-color: var(--color-dark);
+    }
+
+    75%  {background-color:var(--color-light); right:5%; top:20%;
+    color: var(--color-dark);}
+
+    100% {background-color:var(--color-middle); right:5%; top:40%}
+  }
+
+/***/
 
 /***** INDEX *****/
 /* intro */
