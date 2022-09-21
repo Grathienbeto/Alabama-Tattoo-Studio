@@ -116,6 +116,7 @@ body {
 /* HERO ANIMATION */
 
 @keyframes movimiento {
+    
     0%   {background-color:var(--color-middle); right: 5%; top:40%;}
 
     25%  {background-color:var(--color-light); right:25%; top:40%;
