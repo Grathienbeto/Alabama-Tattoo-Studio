@@ -1,0 +1,32 @@
+/***** FOOTER *****/
+footer {
+    background-color: $color-dark;
+    border-top: 4px solid $color-contrast;
+    color: $color-light;
+    font-family: $font-text;
+    font-size: $font-size-xsmall;
+    line-height: 2;
+    padding: $padding-high;
+    text-align: center;
+    a {
+        color: $color-light;
+        text-decoration: none;
+        &:visited {
+            color: $color-light
+        }
+    }
+    h3 {
+        font-size: $font-size-small;
+        text-decoration: underline $color-contrast;
+        padding-bottom: $padding-small;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    footer {
+        a, h3, p{
+            font-size: $font-size-xsmall;
+            padding-bottom: $padding-xsmall;
+        }
+    }
+}

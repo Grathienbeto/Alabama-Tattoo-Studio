@@ -1,604 +1,538 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap');
+@charset "UTF-8";
+/* PALETA DE COLORES */
+/* FUENTES */
+/* TAMAÑO DE LETRA*/
+/* TAMAÑO DE SEPARACION*/
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-:root {
-    /* PALETA DE COLORES */
-    --color-dark: #282726;
-    --color-middle: #777472fd;
-    --color-light: #dfe2e3;
-    --color-contrast: #b56e20;
-
-    /* FUENTES */
-    --font-titles: 'Bebas Neue';
-    --font-text:'Roboto', monospace;
-
-    /* TAMAÑO DE LETRA*/
-    --font-size-vhigh: 7rem;
-    --font-size-high: 5rem;
-    --font-size-mid: 3.5rem;
-    --font-size-small: 2.5rem;
-    --font-size-xsmall: 1.75rem;
-
-    /* TAMAÑO DE SEPARACION*/
-    --padding-vhigh: 7rem;
-    --padding-high: 5rem;
-    --padding-mid: 3.5rem;
-    --padding-small: 2rem;
-    --padding-xsmall: 1rem;
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  overflow-x: hidden !important;
 }
 
 /***** NAV *****/
 nav {
-    background-color: var(--color-dark);
-    border-bottom: 4px solid var(--color-contrast) ;
-    color: var(--color-light);
-    font-family: var(--font-titles);
-    font-size: var(--font-size-mid);
-    margin: 0 !important;
+  background-color: #282726;
+  border-bottom: 4px solid #b56e20;
+  color: #dfe2e3;
+  font-family: "Bebas Neue";
+  font-size: 3.5rem;
+  margin: 0 !important;
 }
-
 nav a {
-    color: var(--color-light) !important;
+  color: #dfe2e3 !important;
 }
-
-nav a:visited {
-    color: var(--color-light) !important ;
+nav a :visited {
+  color: #dfe2e3 !important;
 }
-
-.brand {
-    font-size: var(--font-size-high);
-    text-decoration: none;
+nav .blanco {
+  border: #dfe2e3;
+  background-color: #dfe2e3;
 }
-
-.blanco {
-    border: var(--color-light);
-    background-color: var(--color-light) ;
+nav .container-fluid div .brand {
+  font-size: 5rem;
+  text-decoration: none;
 }
-
-/* este hover y su animacion son robo jaja, queria una animacion linda pero no las manejo todavia*/
-.underline a:hover {
-    display: inline-block;
-    position: relative;
-} 
-.underline a:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--color-contrast);
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
+nav .container-fluid .underline a:hover {
+  display: inline-block;
+  position: relative;
 }
-.underline a:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+nav .container-fluid .underline a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #b56e20;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
 }
-
-/***** HERO *****/
-#hero {
-    background-color: var(--color-dark);
-    background-image: url(../images/imagen-fondo.jpg);
-    background-repeat: no-repeat;
-    border-bottom: 4px solid var(--color-contrast);
-    height: 90vh;
-    z-index: 0;
+nav .container-fluid .underline a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
-
-.hero__box {
-    background-color: var(--color-dark);
-    border: 3px solid var(--color-contrast);
-    border-radius: 25px;
-    color: var(--color-light);
-    font-family: var(--font-titles);
-    font-size: var(--font-size-mid);
-    letter-spacing: 0.25rem;
-    padding: var(--padding-mid);
-    position: absolute;
-    right: 5%;
-    top: 40%;
-    animation: movimiento 10s linear 0.3s infinite ;
-    max-width: 40%;
-}
-
-.hero__title {
-    font-size: var(--font-size-high);
-}
-
-body {
-    background-color: var(--color-light) ;
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 100% !important; 
-    overflow-x: hidden !important;
-}
-/* HERO ANIMATION */
-
-@keyframes movimiento {
-    
-    0%   {background-color:var(--color-middle); right: 5%; top:40%;}
-
-    25%  {background-color:var(--color-light); right:25%; top:40%;
-    color: var(--color-dark)}
-
-    50%  {background-color:var(--color-contrast); right:25%; top:20%;
-            color: var(--color-dark);
-            border-color: var(--color-dark);
-    }
-
-    75%  {background-color:var(--color-light); right:5%; top:20%;
-    color: var(--color-dark);}
-
-    100% {background-color:var(--color-middle); right:5%; top:40%}
-  }
-
-/***/
-
-/***** INDEX *****/
-/* intro */
-.intro {
-    font-family: var(--font-titles);
-    padding: var(--padding-small);
-}
-
-.intro h1 {
-    color: var(--color-dark);
-    font-size: var(--font-size-high);
-    text-decoration: underline var(--color-contrast) !important;
-}
-
-.intro p {
-    color: var(--color-middle);
-    font-size: var(--font-size-mid);
-    line-height: 1.2;
-}
-
-.intro__img {
-    min-width: 600px;
-    height: auto;
-}
-
-/* servicios */
-.servicios__container {
-    background-color: var(--color-dark);
-}
-
-.servicios__box {
-    background-color: var(--color-dark);
-    color: var(--color-light);
-    font-size: var(--font-size-xsmall);
-    font-family:var(--font-titles);
-}
-
-.servicios__box h1,
-.servicios__title {
-    font-family: var(--font-titles);
-    text-decoration: underline var(--color-contrast);
-}
-
-.servicios__title {
-    font-size: var(--font-size-high);
-}
-
-/* artistas */
-.artistas {
-    width: 90%;
-}
-.artistas div img {
-    min-width: 350px !important;
-    max-width: 600px !important;
-    display: block;
-    margin: 0 auto;
-}
-
-.artista__texto {
-    font-family: var(--font-titles);
-    font-size: var(--font-size-xsmall);
-}
-
-.artista__texto h1{
-    color: var(--color-dark);
-    font-size: var(--font-size-small);
-    text-decoration: underline var(--color-contrast);
-}
-
-.artista__texto p{
-    color: var(--color-middle);
-}
-/***** GALERIA TATUAJES *****/
-
-.body-galeria {
-    background-color: var(--color-dark);
-}
-
-.titulo {
-    color: var(--color-light);
-    font-family: var(--font-titles);
-    font-size: var(--font-size-vhigh);
-    text-decoration: underline var(--color-contrast);
-    padding: var(--padding-high) 0;
-}
-
-.gal_tatuaje {
-    background-color: var(--color-dark); 
-    margin-left: 0;
-    margin-right: 0;
-}
-
-.boton-galeria-izq {
-    margin: 0;
-}
-
-.carousel-item img{
-    margin: auto;
-    max-width: 35%;
-    max-height: auto;
-}
-
-/***** CONTACTO *****/
-
-.faq__title {
-    font-size: var(--font-size-high);
-    font-family: var(--font-titles);
-    text-decoration: underline var(--color-contrast);
-    padding:var(--padding-high) 0;
-}
-
-.faq {
-    font-family: var(--font-titles);
-    margin: 0 auto;
-    max-width: 1000px;
-}
-
-.faq div h1 {
-    font-size: var(--font-size-small);
-}
-
-.faq div p {
-    font-size: var(--font-size-xsmall);
-    color: var(--color-middle);
-}
-
-form {
-    font-family: var(--font-titles);
-    font-size: var(--padding-xsmall);
-    margin: var(--font-size-high) auto 0 !important;
-    max-width: 1000px;
-    text-align: center;
-}
-
-legend {
-    font-size: var(--font-size-small);
-    font-weight: bold;
-    margin-bottom: var(--padding-xsmall);
-    max-width: 60%;
-}
-
-label {
-    font-size: var(--font-size-xsmall);
-    font-weight: bold;
-}
-
-label,
-input {
-    display: block;
-    margin: 2rem auto 0;
-}
-
-input {
-    font-family:var(--font-titles);
-    font-size: 1.6rem;
-    margin: var(--padding-xsmall) auto;
-    min-width: 60%;
-}
-
-
-textarea {
-    display: block;
-    font-family: var(--font-text);
-    margin: var(--padding-small) auto;
-    max-width: 60% !important;
-    resize: none;
-}
-
-.btn {
-    background-color: var(--color-dark) !important;
-    border: 4px solid var(--color-dark) ;
-    color: var(--color-light);
-    max-width: 60%;
-}
-
-.btn:hover {
-    color: var(--color-light) !important;
-    border: 4px solid var(--color-contrast) !important;
-    opacity: 0.95;
-}
-
-/***** PIERCINGS *****/
-
-.dark-bg {
-    background-color: var(--color-dark);
-    color: var(--color-light)
-}
-.piercingsServicio {
-    width: 95%;
-}
-
-.piercing__img {
-    border: 2px solid var(--color-light);
-    margin-bottom: var(--padding-small);
-}
-
-.piercing__texto {
-    font-size: var(--font-size-xsmall);
-    font-family: var(--font-titles);
-}
-
-.catalogo_container {
-    max-width: 80%;
-}
-
-.catalogo__title {
-    font-family: var(--font-titles);
-    font-size: var(--font-size-vhigh);
-    text-decoration: underline var(--color-contrast);
-    text-align: center;
-    margin-top: var(--padding-high);
-}
-
-.card {
-    background-color: var(--color-dark);
-    font-family: var(--font-titles);
-}
-
-.card div p {
-    font-size: var(--font-size-xsmall);
-}
-
-/***** FOOTER *****/
-footer {
-    background-color: var(--color-dark);
-    border-top: 4px solid var(--color-contrast);
-    color: var(--color-light);
-    font-family: var(--font-text);
-    font-size: var(--font-size-xsmall);
-    margin-top: var(--padding-high);
-    line-height: 2;
-    padding: var(--padding-high);
-    text-align: center;
-}
-
-footer a {
-    color: var(--color-light);
-    text-decoration: none;
-}
-
-footer a:visited {
-    color: var(--color-light)
-}
-
-footer h3 {
-    font-size: var(--font-size-small);
-    text-decoration: underline var(--color-contrast);
-    padding-bottom: var(--padding-small);
-}
-
 
 @media screen and (max-width: 800px) {
-    .navbar-nav {
-        font-size: var(--font-size-small);
-    }
-
-    #hero {
-        padding-top:var(--padding-vhigh);
-    }
-
-    .hero__box {
-        font-size: var(--font-size-small);
-        margin: 0 auto;
-        max-width: 650px;
-        position:static;
-        padding: var(--padding-xsmall);
-        text-align: center;
-    }
-    
-    .hero__box h1 {
-        margin-bottom: var(--padding-small);
-    }
-
-    .carousel-item img{
-        max-width: 100%;
-    }
-
-    .titulo {
-        font-size: var(--font-size-high);
-        text-decoration: underline var(--color-contrast);
-        padding: var(--padding-small) 0;
-    }
-
-    .intro h1,
-    .intro p {
-        font-size: var(--font-size-small);
-    }
-
-    footer h3,
-    footer p,
-    footer a {
-        font-size: var(--font-size-xsmall);
-        padding-bottom: var(--padding-xsmall);
-    }
-    
-    .intro__text {
-        font-size: var(--font-size-xsmall);
-    }
-
-    .servicios__container {
-        flex-flow: column wrap;
-        gap: var(--padding-small);
-        padding: var(--padding-xsmall);
-    }
-    
-    .servicios__title {
-        text-align: center;
-    }
-
-    .servicios__box h1 {
-        font-size: var(--font-size-small);
-    }
-    
-    .servicios__box p {
-        font-size: var(--font-size-xsmall);
-    }
-
-    .artistas img {
-        display: block;
-        margin: 0 auto;
-        max-width: 350px;
-    }
-
-    .artista__texto {
-        font-size: var(--font-size-xsmall);
-        padding-bottom: var(--padding-xsmall) ;
-    }
-
-    .artista__texto h1 {
-        text-align: center;
-        font-weight: bold;
-    }
-
-    .galeria__img {
-        max-width: 100%;
-    }
-
-    .faq__title {
-        font-size: var(--font-size-mid);
-        text-align: center;
-        padding-bottom: var(--padding-mid);
-    }
-    
-    .faq div h1 {
-        font-size: var(--font-size-small);
-    }
-
-    .faq div p {
-        font-size: var(--font-size-xsmall);
-    }
-
-    .catalogo_container {
-        max-width: 100%;
-    }
-    
-    .piercingsServicio{
-        margin: 0 auto;
-        max-width: 100%;
-    }
-
-    .piercing__varios {
-        margin: 0 auto;
-    }
-
-    .piercing__varios{
-        max-width: 80%;
-    }
-
-    .catalogoPiercing {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 1fr);
-    }
-
-    .catalogo__texto {
-        font-size: var(--font-size-xsmall);
-    }
-
-    .catalogo__img {
-        max-width: 300px;
-    } 
-    .piercing-galeria{
-        max-width: 400px !important;
-    }
-
-    
-    legend {
-        font-size: var(--font-size-xsmall);
-        margin-bottom: var(--padding-small);
-    }
-    
-    input {
-        padding: 0.3rem;
-        min-width: 100%;
-    }
-    
-    label {
-        font-size: 1.6rem;
-        font-weight: bold;
-    }
-    
-    textarea {
-        min-width: 100%;
-        resize: none;
-    }
+  nav .navbar-nav {
+    font-size: 2.5rem;
+  }
 }
-
-
 @media (min-width: 801px) and (max-width: 1200px) {
-    
-    .navbar-nav {
-        font-size: var(--font-size-small);
-    }
-
-    #hero {
-        padding:var(--padding-vhigh) 0 var(--padding-vhigh);
-    }
-
-    .hero__box {
-        font-size: var(--font-size-mid);
-        margin: 0 auto;
-        max-width: 650px;
-        position: static;
-        padding: var(--padding-small);
-        text-align: center;
-    }
-
-    .intro h1,
-    .intro p {
-        font-size: var(--font-size-mid);
-    }
-
-    .artistas {
-        padding: var(--font-size-high) 0 !important;
-        width: 80%;
-    }
-
-    .artista__foto {
-        display: block;
-        min-width: 450px;
-        max-width: 600px !important;
-    }
-
-    .galeria__img {
-        max-width: 35%;
-    }
-
-    .piercing__varios {
-        max-width: 500px;
-        margin: 0 auto;
-    }
-
-    .titulo {
-        text-align: center;
-    }
-
-    /*******/
-
-    .catalogoPiercing {
-        grid-template-columns: repeat(2, 2fr);
-    }
-
-    .catalogo__img {
-        padding-bottom: var(--padding-xsmall);
-    }
-    .catalogo__texto {
-        font-size: var(--font-size-xsmall);
-    }
+  nav .navbar-nav {
+    font-size: 2.5rem;
+  }
 }
+/***** HERO */
+#hero {
+  background-color: #282726;
+  background-image: url(../images/imagen-fondo.jpg);
+  background-repeat: no-repeat;
+  border-bottom: 4px solid #b56e20;
+  height: 90vh;
+  z-index: 0;
+}
+#hero .hero__box {
+  background-color: #282726;
+  border: 3px solid #b56e20;
+  border-radius: 25px;
+  color: #dfe2e3;
+  font-family: "Bebas Neue";
+  font-size: 3.5rem;
+  letter-spacing: 0.25rem;
+  padding: 3.5rem;
+  position: absolute;
+  right: 5%;
+  top: 40%;
+  -webkit-animation: movimiento 10s linear 0.3s infinite;
+          animation: movimiento 10s linear 0.3s infinite;
+  max-width: 40%;
+}
+#hero .hero__box .hero__title {
+  font-size: 5rem;
+}
+
+@media screen and (max-width: 800px) {
+  #hero {
+    padding-top: 7rem;
+  }
+  #hero .hero__box {
+    font-size: 2.5rem;
+    margin: 0 auto;
+    max-width: 650px;
+    position: static;
+    padding: 1rem;
+    text-align: center;
+  }
+  #hero .hero__box h1 {
+    margin-bottom: 2rem;
+  }
+}
+@media (min-width: 801px) and (max-width: 1200px) {
+  #hero {
+    padding: 7rem 0 7rem;
+  }
+  #hero .hero__box {
+    font-size: 3.5rem;
+    margin: 0 auto;
+    max-width: 650px;
+    position: static;
+    padding: 2rem;
+    text-align: center;
+  }
+}
+/* intro */
+main .intro {
+  font-family: "Bebas Neue";
+  padding: 2rem;
+}
+main .intro h1 {
+  color: #282726;
+  font-size: 5rem;
+  -webkit-text-decoration: underline #b56e20 !important;
+          text-decoration: underline #b56e20 !important;
+}
+main .intro p {
+  color: rgba(119, 116, 114, 0.9921568627);
+  font-size: 3.5rem;
+  line-height: 1.2;
+}
+main .intro__img {
+  min-width: 600px;
+  height: auto;
+}
+
+@media screen and (max-width: 800px) {
+  main .intro h1 {
+    font-size: 2.5rem;
+  }
+  main .intro p {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 801px) and (max-width: 1200px) {
+  main .intro h1 {
+    font-size: 3.5rem;
+  }
+  main .intro p {
+    font-size: 3.5rem;
+  }
+}
+/* servicios */
+main section div .servicios__title {
+  font-family: "Bebas Neue";
+  -webkit-text-decoration: underline #b56e20;
+          text-decoration: underline #b56e20;
+  font-size: 5rem;
+}
+main section .servicios__container {
+  background-color: #282726;
+}
+main section .servicios__container .servicios__box {
+  background-color: #282726;
+  color: #dfe2e3;
+  font-size: 1.75rem;
+  font-family: "Bebas Neue";
+}
+main section .servicios__container .servicios__box h1 {
+  -webkit-text-decoration: underline #b56e20;
+          text-decoration: underline #b56e20;
+}
+
+@media screen and (max-width: 800px) {
+  main div .servicios__title {
+    text-align: center;
+  }
+  main section .servicios__container {
+    flex-flow: column wrap;
+    gap: 2rem;
+    padding: 1rem;
+  }
+  main section .servicios__container .servicios__box h1 {
+    font-size: 2.5rem;
+  }
+  main section .servicios__container .servicios__box p {
+    font-size: var(--font-size-xsmall);
+  }
+}
+/* artistas */
+main .artistas {
+  width: 90%;
+}
+main .artistas div img {
+  min-width: 350px !important;
+  max-width: 600px !important;
+  display: block;
+  margin: 0 auto;
+}
+main .artistas div .artista__texto {
+  font-family: "Bebas Neue";
+  font-size: 1.75rem;
+}
+main .artistas div .artista__texto h1 {
+  color: #282726;
+  font-size: 2.5rem;
+  -webkit-text-decoration: underline #b56e20;
+          text-decoration: underline #b56e20;
+}
+main .artistas div .artista__texto p {
+  color: rgba(119, 116, 114, 0.9921568627);
+}
+
+@media screen and (max-width: 800px) {
+  main .artistas div img {
+    display: block;
+    margin: 0 auto;
+    max-width: 350px;
+  }
+  main .artistas div .artista__texto {
+    font-size: 1.75rem;
+    padding-bottom: 1rem;
+  }
+  main .artistas div .artista__texto h1 {
+    text-align: center;
+    font-weight: bold;
+  }
+}
+@media (min-width: 801px) and (max-width: 1200px) {
+  main .artistas {
+    padding: 5rem 0 !important;
+    width: 80%;
+  }
+  main .artistas div .img {
+    display: block;
+    min-width: 450px;
+    max-width: 600px !important;
+  }
+}
+.body-galeria .gal_tatuaje {
+  background-color: #282726;
+  margin: 0;
+}
+.body-galeria .gal_tatuaje .titulo {
+  color: #dfe2e3;
+  font-family: "Bebas Neue";
+  font-size: 7rem;
+  -webkit-text-decoration: underline #b56e20;
+          text-decoration: underline #b56e20;
+  padding: 5rem 0;
+}
+.body-galeria .gal_tatuaje .carousel .carousel-inner .carousel-item img {
+  margin: auto;
+  max-width: 40%;
+  max-height: auto;
+}
+.body-galeria .gal_tatuaje .boton-galeria-izq {
+  margin: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .body-galeria .gal_tatuaje .titulo {
+    font-size: 5rem;
+    -webkit-text-decoration: underline #b56e20;
+            text-decoration: underline #b56e20;
+    padding: 2rem 0;
+  }
+  .body-galeria .gal_tatuaje .carousel .carousel-inner .piercing-galeria {
+    max-width: 400px !important;
+  }
+  .body-galeria .gal_tatuaje .carousel .carousel-inner .piercing-galeria img {
+    min-width: 100%;
+  }
+}
+@media (min-width: 801px) and (max-width: 1200px) {
+  .body-galeria .gal_tatuaje .titulo {
+    text-align: center;
+  }
+  .body-galeria .gal_tatuaje .carousel .carousel-inner .carousel-item img {
+    min-width: 80%;
+  }
+}
+body .faq {
+  font-family: "Bebas Neue";
+  margin: 0 auto;
+  max-width: 1000px;
+}
+body .faq .faq__title {
+  font-size: 5rem;
+  -webkit-text-decoration: underline #b56e20;
+          text-decoration: underline #b56e20;
+  padding: 5rem 0;
+}
+body .faq div h1 {
+  font-size: 2.5rem;
+}
+body .faq div p {
+  font-size: 1.75rem;
+  color: rgba(119, 116, 114, 0.9921568627);
+}
+body form {
+  font-family: "Bebas Neue";
+  font-size: 1rem;
+  margin: 5rem auto 0 !important;
+  max-width: 1000px;
+  text-align: center;
+}
+body form legend {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  max-width: 60%;
+}
+body form label {
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: block;
+  margin: 2rem auto 0;
+}
+body form input {
+  display: block;
+  margin: 2rem auto 0;
+  font-family: "Bebas Neue";
+  font-size: 1.6rem;
+  margin: 1rem auto;
+  min-width: 60%;
+}
+body form textarea {
+  display: block;
+  font-family: "Roboto";
+  margin: 2rem auto;
+  max-width: 60% !important;
+  resize: none;
+}
+body form .btn {
+  background-color: #282726 !important;
+  border: 4px solid #282726;
+  color: #dfe2e3;
+  max-width: 60%;
+}
+body form .btn:hover {
+  color: #dfe2e3 !important;
+  border: 4px solid #b56e20 !important;
+  opacity: 0.95;
+}
+
+@media screen and (max-width: 800px) {
+  body .faq .faq__title {
+    font-size: 3.5rem;
+    text-align: center;
+    padding-bottom: 3.5rem;
+  }
+  body .faq div h1 {
+    font-size: 2.5rem;
+  }
+  body .faq div p {
+    font-size: 1.75rem;
+  }
+  body form legend {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+  body form input {
+    padding: 0.3rem;
+    min-width: 100%;
+  }
+  body form label {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  body form textarea {
+    min-width: 100%;
+  }
+}
+.dark-bg {
+  background-color: #282726;
+  color: #dfe2e3;
+}
+.dark-bg .catalogo__title {
+  font-family: "Bebas Neue";
+  font-size: 7rem;
+  -webkit-text-decoration: underline #b56e20;
+          text-decoration: underline #b56e20;
+  text-align: center;
+  margin: 3.5rem 0;
+}
+.dark-bg .piercingsServicio {
+  width: 95%;
+}
+.dark-bg .piercingsServicio div .piercing__texto {
+  font-size: 1.75rem;
+  font-family: "Bebas Neue";
+  text-align: center;
+}
+.dark-bg .piercingsServicio div .piercing__img {
+  border: 2px solid #dfe2e3;
+  margin-bottom: 2rem;
+}
+.dark-bg .gal_tatuaje {
+  background-color: #282726;
+  margin: 0;
+}
+.dark-bg .gal_tatuaje .titulo {
+  color: #dfe2e3;
+  font-family: "Bebas Neue";
+  font-size: 7rem;
+  -webkit-text-decoration: underline #b56e20;
+          text-decoration: underline #b56e20;
+  padding: 5rem 0;
+}
+.dark-bg .gal_tatuaje .carousel .carousel-inner .carousel-item img {
+  margin: auto;
+  max-width: 40%;
+  max-height: auto;
+}
+.dark-bg .catalogo_container {
+  max-width: 80%;
+}
+.dark-bg .catalogo_container .card {
+  background-color: #282726;
+  font-family: "Bebas Neue";
+}
+.dark-bg .catalogo_container .card div p {
+  font-size: 1.75rem;
+}
+
+@media screen and (max-width: 800px) {
+  .dark-bg .piercingsServicio {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  .dark-bg .gal_tatuaje .carousel .carousel-inner .piercing-galeria img {
+    min-width: 100%;
+  }
+  .dark-bg .catalogo_container {
+    max-width: 100%;
+  }
+}
+/* artistas */
+main {
+  margin: 3.5rem 3.5rem;
+}
+main .artistas {
+  width: 90%;
+}
+main .artistas div img {
+  min-width: 350px !important;
+  max-width: 600px !important;
+  display: block;
+  margin: 0 auto;
+}
+main .artistas div .artista__texto {
+  font-family: "Bebas Neue";
+  font-size: 1.75rem;
+}
+main .artistas div .artista__texto h1 {
+  color: #282726;
+  font-size: 2.5rem;
+  -webkit-text-decoration: underline #b56e20;
+          text-decoration: underline #b56e20;
+}
+main .artistas div .artista__texto p {
+  color: rgba(119, 116, 114, 0.9921568627);
+}
+
+@media screen and (max-width: 800px) {
+  main .artistas div img {
+    display: block;
+    margin: 0 auto;
+    max-width: 350px;
+  }
+  main .artistas div .artista__texto {
+    font-size: 1.75rem;
+    padding-bottom: 1rem;
+  }
+  main .artistas div .artista__texto h1 {
+    text-align: center;
+    font-weight: bold;
+  }
+}
+@media (min-width: 801px) and (max-width: 1200px) {
+  main .artistas {
+    padding: 5rem 0 !important;
+    width: 80%;
+  }
+  main .artistas div .img {
+    display: block;
+    min-width: 450px;
+    max-width: 600px !important;
+  }
+}
+/***** FOOTER *****/
+footer {
+  background-color: #282726;
+  border-top: 4px solid #b56e20;
+  color: #dfe2e3;
+  font-family: "Roboto";
+  font-size: 1.75rem;
+  line-height: 2;
+  padding: 5rem;
+  text-align: center;
+}
+footer a {
+  color: #dfe2e3;
+  text-decoration: none;
+}
+footer a:visited {
+  color: #dfe2e3;
+}
+footer h3 {
+  font-size: 2.5rem;
+  -webkit-text-decoration: underline #b56e20;
+          text-decoration: underline #b56e20;
+  padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+  footer a, footer h3, footer p {
+    font-size: 1.75rem;
+    padding-bottom: 1rem;
+  }
+}/*# sourceMappingURL=styles.css.map */

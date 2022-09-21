@@ -1,0 +1,80 @@
+/***** HERO */
+#hero {
+    background-color: $color-dark;
+    background-image: url(../images/imagen-fondo.jpg);
+    background-repeat: no-repeat;
+    border-bottom: 4px solid $color-contrast;
+    height: 90vh;
+    z-index: 0;
+    .hero__box {
+        background-color: $color-dark;
+        border: 3px solid $color-contrast;
+        border-radius: 25px;
+        color: $color-light;
+        font-family: $font-titles;
+        font-size: $font-size-mid;
+        letter-spacing: 0.25rem;
+        padding: $padding-mid;
+        position: absolute;
+        right: 5%;
+        top: 40%;
+        animation: movimiento 10s linear 0.3s infinite ;
+        max-width: 40%;
+        .hero__title {
+            font-size: $font-size-high;
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+
+    #hero {
+        padding-top:$padding-vhigh;
+        .hero__box {
+            font-size: $font-size-small;
+            margin: 0 auto;
+            max-width: 650px;
+            position:static;
+            padding: $padding-xsmall;
+            text-align: center;
+            h1 {
+                margin-bottom: $padding-small;
+            }
+        }
+    }
+}
+@media (min-width: 801px) and (max-width: 1200px) {
+    #hero {
+        padding: $padding-vhigh 0 $padding-vhigh;
+        .hero__box {
+            font-size: $font-size-mid;
+            margin: 0 auto;
+            max-width: 650px;
+            position: static;
+            padding: $padding-small;
+            text-align: center;
+        }
+    }
+}
+
+
+
+
+// @keyframes movimiento {
+    
+//     0%   {background-color:var(--color-middle); right: 5%; top:40%;}
+
+//     25%  {background-color:var(--color-light); right:25%; top:40%;
+//     color: var(--color-dark)}
+
+//     50%  {background-color:var(--color-contrast); right:25%; top:20%;
+//             color: var(--color-dark);
+//             border-color: var(--color-dark);
+//     }
+
+//     75%  {background-color:var(--color-light); right:5%; top:20%;
+//     color: var(--color-dark);}
+
+//     100% {background-color:var(--color-middle); right:5%; top:40%}
+//   }
+
+// /***/

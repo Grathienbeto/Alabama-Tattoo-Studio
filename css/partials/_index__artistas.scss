@@ -1,0 +1,62 @@
+/* artistas */
+main {
+    .artistas {
+        width: 90%;
+        div {
+            img {
+                min-width: 350px !important;
+                max-width: 600px !important;
+                display: block;
+                margin: 0 auto;
+            }
+            .artista__texto {
+                font-family: $font-titles;
+                font-size: $font-size-xsmall;
+                h1{
+                    color: $color-dark;
+                    font-size: $font-size-small;
+                    text-decoration: underline $color-contrast;
+                }
+                p{
+                    color: $color-middle;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    main {
+        .artistas {
+            div {
+                img {
+                    display: block;
+                    margin: 0 auto;
+                    max-width: 350px;
+                }
+                .artista__texto {
+                    font-size: $font-size-xsmall;
+                    padding-bottom: $padding-xsmall;
+                    h1 {
+                        text-align: center;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 801px) and (max-width: 1200px) {
+    main {
+        .artistas {
+            padding: $font-size-high 0 !important;
+            width: 80%;
+            div {
+                .img {
+                    display: block;
+                    min-width: 450px;
+                    max-width: 600px !important;
+                }
+            }
+        }
+    }
+}

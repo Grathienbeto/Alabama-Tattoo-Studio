@@ -1,0 +1,45 @@
+/* intro */
+main {
+    .intro {
+        font-family: $font-titles;
+        padding: $padding-small;
+        h1 {
+            color: $color-dark;
+            font-size: $font-size-high;
+            text-decoration: underline $color-contrast !important;
+        }
+        p {
+            color: $color-middle;
+            font-size: $font-size-mid;
+            line-height: 1.2;
+        }
+    }
+    .intro__img {
+        min-width: 600px;
+        height: auto;
+    }
+}
+@media screen and (max-width: 800px) {
+    main{
+        .intro{
+            h1 {
+                font-size: $font-size-small;
+            }
+            p {
+                font-size: $font-size-small;
+            }
+        }
+    }
+}
+@media (min-width: 801px) and (max-width: 1200px) {
+    main {
+        .intro {
+            h1{
+                font-size: $font-size-mid;
+            }
+            p{
+                font-size: $font-size-mid;
+            }
+        }
+    }
+}

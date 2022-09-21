@@ -1,0 +1,105 @@
+body {
+    .faq {
+        font-family: $font-titles;
+        margin: 0 auto;
+        max-width: 1000px;
+        .faq__title {
+            font-size: $font-size-high;
+            text-decoration: underline $color-contrast;
+            padding:$padding-high 0;
+        }
+        div {
+            h1 {
+                font-size: $font-size-small;
+            }
+            p {
+                font-size: $font-size-xsmall;
+                color: $color-middle;
+            }
+        }
+    }
+    form {
+        font-family: $font-titles;
+        font-size: $padding-xsmall;
+        margin: $font-size-high auto 0 !important;
+        max-width: 1000px;
+        text-align: center;
+        legend {
+            font-size: $font-size-small;
+            font-weight: bold;
+            margin-bottom: $padding-xsmall;
+            max-width: 60%;
+
+        }
+        label {
+            font-size: $font-size-small;
+            font-weight: bold;
+            display: block;
+            margin: 2rem auto 0;
+        }
+        input {
+            display: block;
+            margin: 2rem auto 0;
+            font-family:$font-titles;
+            font-size: 1.6rem;
+            margin: $padding-xsmall auto;
+            min-width: 60%;
+        }
+        textarea {
+            display: block;
+            font-family: $font-text;
+            margin: $padding-small auto;
+            max-width: 60% !important;
+            resize: none;
+        }
+        .btn {
+            background-color: $color-dark !important;
+            border: 4px solid $color-dark ;
+            color: $color-light;
+            max-width: 60%;
+            &:hover {
+                color: $color-light !important;
+                border: 4px solid $color-contrast !important;
+                opacity: 0.95;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    body {
+        .faq {
+            .faq__title {
+                font-size: $font-size-mid;
+                text-align: center;
+                padding-bottom: $padding-mid;
+            }
+            div {
+                h1 {
+                    font-size: $font-size-small;
+                }
+                p {
+                    font-size: $font-size-xsmall;
+                }
+            }
+        }
+        form {
+            legend {
+                font-size: $font-size-xsmall;
+                margin-bottom: $padding-small;
+            }
+            input {
+                padding: 0.3rem;
+                min-width: 100%;
+            }
+            label {
+                font-size: 1.6rem;
+                font-weight: bold;
+            }
+            textarea {
+                min-width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,83 @@
+.dark-bg {
+    background-color: $color-dark;
+    color: $color-light;
+    .catalogo__title {
+        font-family: $font-titles;
+        font-size: $font-size-vhigh;
+        text-decoration: underline $color-contrast;
+        text-align: center;
+        margin: $padding-mid 0;
+    }
+    .piercingsServicio {
+        width: 95%;
+        div {
+            .piercing__texto {
+                font-size: $font-size-xsmall;
+                font-family: $font-titles;
+                text-align: center;
+            }            
+            .piercing__img {
+                border: 2px solid $color-light;
+                margin-bottom: $padding-small;
+            }
+        }
+    }
+    .gal_tatuaje{
+        background-color: $color-dark;
+        margin: 0;
+        .titulo {
+            color: $color-light;
+            font-family: $font-titles;
+            font-size: $font-size-vhigh;
+            text-decoration: underline $color-contrast;
+            padding: $padding-high 0;
+        }
+        .carousel {
+            .carousel-inner{
+                .carousel-item {
+                    img {
+                        margin: auto;
+                        max-width: 40%;
+                        max-height: auto;
+                    }
+                }
+            }
+        }
+    }
+    .catalogo_container {
+        max-width: 80%;
+        .card {
+            background-color: $color-dark;
+            font-family: $font-titles;
+            div {
+                p{
+                    font-size: $font-size-xsmall;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .dark-bg {
+        .piercingsServicio {
+            margin: 0 auto;
+            max-width: 100%;
+        }
+        .gal_tatuaje{
+            .carousel {
+                .carousel-inner{
+                    .piercing-galeria{
+                        img {
+                            min-width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .catalogo_container {
+            max-width: 100%;
+        }
+    }
+}
