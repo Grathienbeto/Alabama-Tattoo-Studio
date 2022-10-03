@@ -1,7 +1,7 @@
     /* PALETA DE COLORES */
 
 $color-dark: #282726;
-$color-middle: #777472fd;
+$color-middle: #777472;
 $color-light: #dfe2e3;
 $color-contrast: #b56e20;
 
@@ -21,10 +21,41 @@ $font-size-small: 2.5rem;
 $font-size-xsmall: 1.75rem;
 
 
-    /* TAMAÑO DE SEPARACION*/
+    /* TAMAÑO DE SEPARACION */
 
 $padding-vhigh: 7rem;
 $padding-high: 5rem;
 $padding-mid: 3.5rem;
 $padding-small: 2rem;
 $padding-xsmall: 1rem;
+
+
+    /* PRUEBA MAP */ 
+
+$colores: (
+    color-dark: #282726,
+    color-middle: #777472,
+    color-light: #dfe2e3,
+    color-contrast: #b56e20
+);
+
+$fuentes: (
+    font-titles: 'Bebas Neue',
+    font-text: 'Roboto',
+);
+
+$tamano-fuente: (
+    font-size-vhigh: 7rem,
+    font-size-high: 5rem,
+    font-size-mid: 3.5rem,
+    font-size-small: 2.5rem,
+    font-size-xsmall: 1.75rem,
+);
+
+$tamano-separacion: (
+    padding-vhigh: 7rem,
+    padding-high: 5rem,
+    padding-mid: 3.5rem,
+    padding-small: 2rem,
+    padding-xsmall: 1rem,
+)

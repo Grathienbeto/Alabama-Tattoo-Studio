@@ -1,24 +1,19 @@
 /***** FOOTER *****/
 footer {
-    background-color: $color-dark;
-    border-top: 4px solid $color-contrast;
-    color: $color-light;
-    font-family: $font-text;
+    background-color: map-get($colores, color-dark);
+    border-top: 4px solid map-get($colores, color-contrast);
+    color: map-get($colores, color-light);
+    font-family: map-get($fuentes, font-text);
     font-size: $font-size-xsmall;
     line-height: 2;
     padding: $padding-high;
     text-align: center;
     a {
-        color: $color-light;
-        text-decoration: none;
-        &:visited {
-            color: $color-light
-        }
+        @extend %vinculos;
     }
     h3 {
+        @include tituloFooter ($fuente: $font-text, $color-detalle: $color-contrast, $padding: $padding-small);
         font-size: $font-size-small;
-        text-decoration: underline $color-contrast;
-        padding-bottom: $padding-small;
     }
 }
 

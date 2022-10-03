@@ -1,6 +1,8 @@
 @import "./partials/variables";
 @import "./partials/globals";
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap');
+@import "./partials/extends";
+@import "./partials/mixins";
 @import "./partials/nav.scss";
 @import "./partials/hero";
 @import "./partials/index__intro";

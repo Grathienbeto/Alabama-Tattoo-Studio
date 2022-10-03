@@ -2,7 +2,8 @@
 /* PALETA DE COLORES */
 /* FUENTES */
 /* TAMAÑO DE LETRA*/
-/* TAMAÑO DE SEPARACION*/
+/* TAMAÑO DE SEPARACION */
+/* PRUEBA MAP */
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap");
 * {
   box-sizing: border-box;
@@ -15,6 +16,17 @@ body {
   padding: 0 !important;
   width: 100% !important;
   overflow-x: hidden !important;
+}
+
+footer a {
+  text-decoration: none;
+  color: #dfe2e3;
+}
+footer a:visited {
+  color: #dfe2e3;
+}
+footer a:hover {
+  color: #b56e20;
 }
 
 /***** NAV *****/
@@ -132,17 +144,17 @@ nav .container-fluid .underline a:hover:after {
 /* intro */
 main .intro {
   font-family: "Bebas Neue";
-  padding: 2rem;
 }
 main .intro h1 {
   color: #282726;
   font-size: 5rem;
-  -webkit-text-decoration: underline #b56e20 !important;
-          text-decoration: underline #b56e20 !important;
+  -webkit-text-decoration: underline #b56e20;
+          text-decoration: underline #b56e20;
 }
 main .intro p {
-  color: rgba(119, 116, 114, 0.9921568627);
+  color: #777472;
   font-size: 3.5rem;
+  margin-top: 1rem;
   line-height: 1.2;
 }
 main .intro__img {
@@ -155,7 +167,7 @@ main .intro__img {
     font-size: 2.5rem;
   }
   main .intro p {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
   }
 }
 @media (min-width: 801px) and (max-width: 1200px) {
@@ -163,7 +175,7 @@ main .intro__img {
     font-size: 3.5rem;
   }
   main .intro p {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
 }
 /* servicios */
@@ -181,76 +193,99 @@ main section .servicios__container .servicios__box {
   color: #dfe2e3;
   font-size: 1.75rem;
   font-family: "Bebas Neue";
+  padding: 1rem;
 }
-main section .servicios__container .servicios__box h1 {
+main section .servicios__container .servicios__box h2 {
+  font-size: 2.5rem;
   -webkit-text-decoration: underline #b56e20;
           text-decoration: underline #b56e20;
 }
 
 @media screen and (max-width: 800px) {
-  main div .servicios__title {
+  main section div .servicios__title {
+    font-size: 3.5rem;
     text-align: center;
   }
   main section .servicios__container {
     flex-flow: column wrap;
-    gap: 2rem;
-    padding: 1rem;
+    padding: 0.5rem;
   }
-  main section .servicios__container .servicios__box h1 {
+  main section .servicios__container .servicios__box h2 {
     font-size: 2.5rem;
   }
   main section .servicios__container .servicios__box p {
-    font-size: var(--font-size-xsmall);
+    font-size: 1.75rem;
   }
 }
 /* artistas */
-main .artistas {
+body main {
+  padding: 3.5rem 3.5rem;
+}
+body main .artistas {
   width: 90%;
 }
-main .artistas div img {
-  min-width: 350px !important;
-  max-width: 600px !important;
+body main .artistas div {
+  margin-bottom: 3rem;
+}
+body main .artistas div img {
+  min-width: 300px;
+  max-width: 600px;
   display: block;
   margin: 0 auto;
 }
-main .artistas div .artista__texto {
+body main .artistas div .artista__texto {
   font-family: "Bebas Neue";
   font-size: 1.75rem;
 }
-main .artistas div .artista__texto h1 {
+body main .artistas div .artista__texto h1 {
   color: #282726;
   font-size: 2.5rem;
   -webkit-text-decoration: underline #b56e20;
           text-decoration: underline #b56e20;
 }
-main .artistas div .artista__texto p {
-  color: rgba(119, 116, 114, 0.9921568627);
+body main .artistas div .artista__texto p {
+  color: #777472;
 }
 
 @media screen and (max-width: 800px) {
-  main .artistas div img {
+  body main {
+    padding: 1rem 0.75rem;
+  }
+  body main .artistas div {
+    margin-bottom: 1.5rem;
+  }
+  body main .artistas div img {
     display: block;
     margin: 0 auto;
-    max-width: 350px;
+    min-width: 300px;
+    max-width: 450px;
   }
-  main .artistas div .artista__texto {
+  body main .artistas div .artista__texto {
     font-size: 1.75rem;
-    padding-bottom: 1rem;
+    padding: 1rem 0;
   }
-  main .artistas div .artista__texto h1 {
+  body main .artistas div .artista__texto h1 {
     text-align: center;
     font-weight: bold;
   }
 }
 @media (min-width: 801px) and (max-width: 1200px) {
-  main .artistas {
-    padding: 5rem 0 !important;
+  body main .artistas {
     width: 80%;
   }
-  main .artistas div .img {
-    display: block;
+  body main .artistas div .img {
     min-width: 450px;
-    max-width: 600px !important;
+    max-width: 600px;
+  }
+  body main .artistas div .artista__texto {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 2.5rem;
+    padding: 2rem 0;
+  }
+  body main .artistas div .artista__texto h1 {
+    text-align: center;
+    font-weight: bold;
   }
 }
 .body-galeria .gal_tatuaje {
@@ -312,7 +347,11 @@ body .faq div h1 {
 }
 body .faq div p {
   font-size: 1.75rem;
-  color: rgba(119, 116, 114, 0.9921568627);
+  color: #777472;
+}
+body .faq div hr {
+  color: #b56e20;
+  border: solid 2px #b56e20;
 }
 body form {
   font-family: "Bebas Neue";
@@ -328,9 +367,9 @@ body form legend {
   max-width: 60%;
 }
 body form label {
+  display: block;
   font-size: 2.5rem;
   font-weight: bold;
-  display: block;
   margin: 2rem auto 0;
 }
 body form input {
@@ -364,7 +403,11 @@ body form .btn:hover {
   body .faq .faq__title {
     font-size: 3.5rem;
     text-align: center;
-    padding-bottom: 3.5rem;
+    padding-bottom: 2rem;
+  }
+  body .faq div {
+    padding: 0 0.75rem;
+    text-align: center;
   }
   body .faq div h1 {
     font-size: 2.5rem;
@@ -372,20 +415,33 @@ body form .btn:hover {
   body .faq div p {
     font-size: 1.75rem;
   }
-  body form legend {
+  body form {
+    margin: 0 auto;
+    width: 90%;
+  }
+  body form fieldset legend {
     font-size: 1.75rem;
     margin-bottom: 2rem;
   }
-  body form input {
+  body form fieldset input {
     padding: 0.3rem;
-    min-width: 100%;
+    margin: 0 auto;
+    min-width: 90%;
   }
-  body form label {
+  body form fieldset label {
     font-size: 1.6rem;
     font-weight: bold;
   }
-  body form textarea {
+  body form fieldset textarea {
     min-width: 100%;
+  }
+  body form fieldset .btn {
+    margin: 1rem;
+  }
+}
+@media (min-width: 801px) and (max-width: 1200px) {
+  body .faq {
+    width: 80%;
   }
 }
 .dark-bg {
@@ -399,6 +455,11 @@ body form .btn:hover {
           text-decoration: underline #b56e20;
   text-align: center;
   margin: 3.5rem 0;
+}
+.dark-bg .catalogo__descripcion {
+  font-family: "Bebas Neue";
+  font-size: 2.5rem;
+  text-align: center;
 }
 .dark-bg .piercingsServicio {
   width: 95%;
@@ -454,14 +515,17 @@ body form .btn:hover {
 }
 /* artistas */
 main {
-  margin: 3.5rem 3.5rem;
+  padding: 3.5rem 3.5rem;
 }
 main .artistas {
   width: 90%;
 }
+main .artistas div {
+  margin-bottom: 3rem;
+}
 main .artistas div img {
-  min-width: 350px !important;
-  max-width: 600px !important;
+  min-width: 300px;
+  max-width: 600px;
   display: block;
   margin: 0 auto;
 }
@@ -476,18 +540,22 @@ main .artistas div .artista__texto h1 {
           text-decoration: underline #b56e20;
 }
 main .artistas div .artista__texto p {
-  color: rgba(119, 116, 114, 0.9921568627);
+  color: #777472;
 }
 
 @media screen and (max-width: 800px) {
+  main {
+    padding: 2rem 0.75rem;
+  }
   main .artistas div img {
     display: block;
     margin: 0 auto;
-    max-width: 350px;
+    min-width: 300px;
+    max-width: 450px;
   }
   main .artistas div .artista__texto {
     font-size: 1.75rem;
-    padding-bottom: 1rem;
+    padding: 2rem 0;
   }
   main .artistas div .artista__texto h1 {
     text-align: center;
@@ -496,13 +564,21 @@ main .artistas div .artista__texto p {
 }
 @media (min-width: 801px) and (max-width: 1200px) {
   main .artistas {
-    padding: 5rem 0 !important;
     width: 80%;
   }
   main .artistas div .img {
-    display: block;
     min-width: 450px;
-    max-width: 600px !important;
+    max-width: 600px;
+  }
+  main .artistas div .artista__texto {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 2.5rem;
+    padding: 3.5rem 0;
+  }
+  main .artistas div .artista__texto h1 {
+    text-align: center;
+    font-weight: bold;
   }
 }
 /***** FOOTER *****/
@@ -516,18 +592,12 @@ footer {
   padding: 5rem;
   text-align: center;
 }
-footer a {
-  color: #dfe2e3;
-  text-decoration: none;
-}
-footer a:visited {
-  color: #dfe2e3;
-}
 footer h3 {
-  font-size: 2.5rem;
+  font-size: "Roboto";
   -webkit-text-decoration: underline #b56e20;
           text-decoration: underline #b56e20;
   padding-bottom: 2rem;
+  font-size: 2.5rem;
 }
 
 @media screen and (max-width: 800px) {

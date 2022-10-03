@@ -1,0 +1,10 @@
+%vinculos {
+    text-decoration: none;
+    color: map-get($colores, color-light);
+    &:visited {
+        color: $color-light;
+    }
+    &:hover {
+        color: $color-contrast;
+    }
+}

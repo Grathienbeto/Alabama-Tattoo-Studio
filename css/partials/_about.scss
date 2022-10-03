@@ -1,12 +1,13 @@
 /* artistas */
 main {
-    margin: $padding-mid 3.5rem;
+    padding: $padding-mid 3.5rem;
     .artistas {
         width: 90%;
         div {
+            margin-bottom: 3rem;
             img {
-                min-width: 350px !important;
-                max-width: 600px !important;
+                min-width: 300px;
+                max-width: 600px;
                 display: block;
                 margin: 0 auto;
             }
@@ -25,18 +26,21 @@ main {
         }
     }
 }
+
 @media screen and (max-width: 800px) {
     main {
+        padding: $padding-small 0.75rem;
         .artistas {
             div {
                 img {
                     display: block;
                     margin: 0 auto;
-                    max-width: 350px;
+                    min-width: 300px;
+                    max-width: 450px;
                 }
                 .artista__texto {
                     font-size: $font-size-xsmall;
-                    padding-bottom: $padding-xsmall;
+                    padding: $padding-small 0;
                     h1 {
                         text-align: center;
                         font-weight: bold;
@@ -46,16 +50,25 @@ main {
         }
     }
 }
+
 @media (min-width: 801px) and (max-width: 1200px) {
     main {
         .artistas {
-            padding: $font-size-high 0 !important;
             width: 80%;
             div {
                 .img {
-                    display: block;
                     min-width: 450px;
-                    max-width: 600px !important;
+                    max-width: 600px;
+                }
+                .artista__texto {
+                    width: 80%;
+                    margin: 0 auto;
+                    font-size: $font-size-small;
+                    padding: $padding-mid 0;
+                    h1 {
+                        text-align: center;
+                        font-weight: bold;
+                    }
                 }
             }
         }

@@ -15,7 +15,9 @@ main {
                 color: $color-light;
                 font-size: $font-size-xsmall;
                 font-family: $font-titles;
-                h1 {
+                padding: $padding-xsmall;
+                h2 {
+                    font-size: $font-size-small;
                     text-decoration: underline $color-contrast;
                 }
             }
@@ -24,23 +26,24 @@ main {
 }
 @media screen and (max-width: 800px) {
     main {
-        div {
-            .servicios__title {
-                text-align: center;
-            }
-        }
         section {
+            div {
+                .servicios__title {
+                    font-size: $font-size-mid;
+                    text-align: center;
+                }
+            }
+
             .servicios__container {
                 flex-flow: column wrap;
-                gap: $padding-small;
-                padding: $padding-xsmall;
+                padding: 0.5rem;
                 .servicios__box {
-                    h1 {
+                    h2 {
                         font-size: $font-size-small;
                         
                     }
                     p {
-                        font-size: var(--font-size-xsmall);
+                        font-size: $font-size-xsmall;
                     }
                 }
             }

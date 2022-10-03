@@ -26,7 +26,6 @@
     }
 }
 @media screen and (max-width: 800px) {
-
     #hero {
         padding-top:$padding-vhigh;
         .hero__box {
@@ -55,26 +54,3 @@
         }
     }
 }
-
-
-
-
-// @keyframes movimiento {
-    
-//     0%   {background-color:var(--color-middle); right: 5%; top:40%;}
-
-//     25%  {background-color:var(--color-light); right:25%; top:40%;
-//     color: var(--color-dark)}
-
-//     50%  {background-color:var(--color-contrast); right:25%; top:20%;
-//             color: var(--color-dark);
-//             border-color: var(--color-dark);
-//     }
-
-//     75%  {background-color:var(--color-light); right:5%; top:20%;
-//     color: var(--color-dark);}
-
-//     100% {background-color:var(--color-middle); right:5%; top:40%}
-//   }
-
-// /***/

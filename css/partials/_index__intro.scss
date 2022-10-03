@@ -2,15 +2,15 @@
 main {
     .intro {
         font-family: $font-titles;
-        padding: $padding-small;
         h1 {
             color: $color-dark;
             font-size: $font-size-high;
-            text-decoration: underline $color-contrast !important;
+            text-decoration: underline $color-contrast;
         }
         p {
             color: $color-middle;
             font-size: $font-size-mid;
+            margin-top: $padding-xsmall;
             line-height: 1.2;
         }
     }
@@ -26,7 +26,7 @@ main {
                 font-size: $font-size-small;
             }
             p {
-                font-size: $font-size-small;
+                font-size: $font-size-xsmall;
             }
         }
     }
@@ -38,7 +38,7 @@ main {
                 font-size: $font-size-mid;
             }
             p{
-                font-size: $font-size-mid;
+                font-size: $font-size-small;
             }
         }
     }

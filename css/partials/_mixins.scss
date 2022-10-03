@@ -1,0 +1,5 @@
+@mixin tituloFooter ($fuente, $color-detalle, $padding) {
+    font-size: $fuente;
+    text-decoration: underline $color-detalle;
+    padding-bottom: $padding;
+}
