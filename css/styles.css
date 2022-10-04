@@ -295,6 +295,7 @@ body main .artistas div .artista__texto p {
 .body-galeria .gal_tatuaje {
   background-color: #282726;
   margin: 0;
+  padding-bottom: 5rem;
 }
 .body-galeria .gal_tatuaje .titulo {
   color: #dfe2e3;
@@ -320,10 +321,10 @@ body main .artistas div .artista__texto p {
             text-decoration: underline #b56e20;
     padding: 2rem 0;
   }
-  .body-galeria .gal_tatuaje .carousel .carousel-inner .piercing-galeria {
+  .body-galeria .gal_tatuaje .carousel .carousel-inner .tattoo-item {
     max-width: 400px !important;
   }
-  .body-galeria .gal_tatuaje .carousel .carousel-inner .piercing-galeria img {
+  .body-galeria .gal_tatuaje .carousel .carousel-inner .tattoo-item img {
     min-width: 100%;
   }
 }

@@ -2,6 +2,7 @@
     .gal_tatuaje{
         background-color: $color-dark;
         margin: 0;
+        padding-bottom: 5rem;
         .titulo {
             color: $color-light;
             font-family: $font-titles;
@@ -35,7 +36,7 @@
             }
             .carousel {
                 .carousel-inner{
-                    .piercing-galeria{
+                    .tattoo-item{
                         max-width: 400px !important;
                         img {
                             min-width: 100%;
