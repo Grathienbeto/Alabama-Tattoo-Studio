@@ -18,10 +18,11 @@
         position: absolute;
         right: 5%;
         top: 40%;
-        animation: movimiento 10s linear 0.3s infinite ;
-        max-width: 40%;
+        animation: movimiento 10s linear 0.3s infinite;
+        max-width: 50%;
         .hero__title {
             font-size: $font-size-high;
+            text-decoration: underline $color-contrast;
         }
     }
 }

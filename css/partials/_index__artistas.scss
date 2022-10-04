@@ -58,20 +58,22 @@ body {
     body {
         main {
             .artistas {
-                width: 80%;
+                width: 100%;
                 div {
                     .img {
                         min-width: 450px;
                         max-width: 600px;
                     }
                     .artista__texto {
-                        width: 80%;
                         margin: 0 auto;
-                        font-size: $font-size-small;
                         padding: $padding-small 0;
                         h1 {
+                            font-size: $font-size-mid;
                             text-align: center;
                             font-weight: bold;
+                        }
+                        p {
+                            font-size: $font-size-small;
                         }
                     }
                 }

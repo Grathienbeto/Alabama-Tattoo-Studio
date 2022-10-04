@@ -10,3 +10,8 @@ Comencé con la corrección de los errores propio de los cambios del transpaso a
 Entrega SEO Y SASS II
     -Agregado keywords y description meta tags en todas las páginas.
     -Agregado mixins, extends y maps. Solo en footer.
+
+
+NUEVO PUSH 3.01
+
+Modificando estilos para la entrega del miércoles.

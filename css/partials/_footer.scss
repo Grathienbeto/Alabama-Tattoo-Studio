@@ -19,8 +19,23 @@ footer {
 
 @media screen and (max-width: 800px) {
     footer {
-        a, h3, p{
-            font-size: $font-size-xsmall;
+        h3 {
+            font-size: 1.5rem;
+        }
+        a, p{
+            font-size: 1.25rem;
+            padding-bottom: $padding-xsmall;
+        }
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1200px) {
+    footer {
+        h3 {
+            font-size: 2rem;
+        }
+        a, p{
+            font-size: 1.5rem;
             padding-bottom: $padding-xsmall;
         }
     }

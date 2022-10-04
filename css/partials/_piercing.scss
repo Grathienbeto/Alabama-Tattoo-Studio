@@ -1,23 +1,25 @@
 .dark-bg {
     background-color: $color-dark;
     color: $color-light;
-    .catalogo__title {
-        font-family: $font-titles;
-        font-size: $font-size-vhigh;
-        text-decoration: underline $color-contrast;
-        text-align: center;
-        margin: $padding-mid 0;
-    }
-    .catalogo__descripcion {
-        font-family: $font-titles;
-        font-size: $font-size-small;
-        text-align: center;
-    }
     .piercingsServicio {
         width: 95%;
+        .catalogo__title {
+            font-family: $font-titles;
+            font-size: $font-size-vhigh;
+            text-decoration: underline $color-contrast;
+            text-align: center;
+            margin: $padding-mid 0;
+        }
+        .catalogo__descripcion {
+            font-family: $font-titles;
+            font-size: $font-size-small;
+            text-align: center;
+        }
         div {
+            margin: 0 auto;
+            max-width: 600px;
             .piercing__texto {
-                font-size: $font-size-xsmall;
+                font-size: $font-size-small;
                 font-family: $font-titles;
                 text-align: center;
             }            
@@ -28,9 +30,8 @@
         }
     }
     .gal_tatuaje{
-        background-color: $color-dark;
         margin: 0;
-        .titulo {
+        .catalogo__title {
             color: $color-light;
             font-family: $font-titles;
             font-size: $font-size-vhigh;
@@ -51,10 +52,26 @@
     }
     .catalogo_container {
         max-width: 80%;
+        .catalogo__title {
+            font-family: $font-titles;
+            font-size: $font-size-vhigh;
+            text-decoration: underline $color-contrast;
+            text-align: center;
+            margin: $padding-mid 0;
+        }
+        .catalogo__descripcion {
+            font-family: $font-titles;
+            font-size: $font-size-small;
+            text-align: center;
+        }
         .card {
             background-color: $color-dark;
             font-family: $font-titles;
             div {
+                h1 {
+                    font-size: $font-size-small;
+                    text-decoration: underline $color-middle;
+                }
                 p{
                     font-size: $font-size-xsmall;
                 }
@@ -63,14 +80,27 @@
     }
 }
 
-
 @media screen and (max-width: 800px) {
     .dark-bg {
-        .piercingsServicio {
-            margin: 0 auto;
-            max-width: 100%;
+        .piercingsServicio{
+            .catalogo__title {
+                font-family: $font-titles;
+                font-size: $font-size-high;
+                text-decoration: underline $color-contrast;
+                text-align: center;
+                margin: $padding-mid 0;
+            }
+            .piercing__varios {
+                margin-bottom: 2rem;
+            }
         }
         .gal_tatuaje{
+            .catalogo__title {
+                font-family: $font-titles;
+                font-size: $font-size-high;
+                text-decoration: underline $color-contrast;
+                text-align: center;
+            }
             .carousel {
                 .carousel-inner{
                     .piercing-galeria{
@@ -83,6 +113,93 @@
         }
         .catalogo_container {
             max-width: 100%;
+            .catalogo__title {
+                font-family: $font-titles;
+                font-size: $font-size-high;
+                text-decoration: underline $color-contrast;
+                text-align: center;
+                margin: $padding-small 0;
+            }
+            .catalogo__descripcion {
+                font-family: $font-titles;
+                font-size: $font-size-xsmall;
+                text-align: center;
+            }
+            .card {
+                background-color: $color-dark;
+                font-family: $font-titles;
+                div {
+                    text-align: center;
+                    h1 {
+                        font-size: $font-size-small;                       
+                    }
+                    p{
+                        font-size: $font-size-xsmall;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1200px) {
+    .dark-bg {
+        .piercingsServicio{
+            .catalogo__title {
+                font-family: $font-titles;
+                font-size: $font-size-high;
+                text-decoration: underline $color-contrast;
+                text-align: center;
+                margin: $padding-mid 0;
+            }
+            .piercing__varios {
+                margin-bottom: 2rem;
+            }
+        }
+        .gal_tatuaje{
+            .catalogo__title {
+                font-family: $font-titles;
+                font-size: $font-size-high;
+                text-decoration: underline $color-contrast;
+                text-align: center;
+            }
+            .carousel {
+                .carousel-inner{
+                    .piercing-galeria{
+                        img {
+                            min-width: 75%;
+                        }
+                    }
+                }
+            }
+        }
+        .catalogo_container {
+            max-width: 100%;
+            .catalogo__title {
+                font-family: $font-titles;
+                font-size: $font-size-high;
+                text-decoration: underline $color-contrast;
+                text-align: center;
+                margin: $padding-small 0;
+            }
+            .catalogo__descripcion {
+                font-family: $font-titles;
+                font-size: $font-size-xsmall;
+                text-align: center;
+            }
+            .card {
+                background-color: $color-dark;
+                font-family: $font-titles;
+                div {
+                    text-align: center;
+                    h1 {
+                        font-size: $font-size-small;
+                    }
+                    p{
+                        font-size: $font-size-xsmall;
+                    }
+                }
+            }
         }
     }
 }
