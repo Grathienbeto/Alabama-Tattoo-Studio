@@ -15,3 +15,8 @@ Entrega SEO Y SASS II
 NUEVO PUSH 3.01
 
 Modificando estilos para la entrega del miércoles.
+
+3.02
+
+Incropore imagenes al carousel de galeria de tatuajes y algunos cambios de estilos.
+Cambio de nombre del lugar.
