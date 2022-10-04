@@ -5,7 +5,7 @@ nav {
     color: $color-light;
     font-family: $font-titles;
     font-size: $font-size-mid;
-    margin: 0 !important;
+    // margin: 0 !important;
     a {
         color: $color-light !important;
         :visited {
@@ -24,6 +24,7 @@ nav {
             }
         } 
         .underline {
+            margin-left: $padding-small;
             a {
                 &:hover {
                     display: inline-block;

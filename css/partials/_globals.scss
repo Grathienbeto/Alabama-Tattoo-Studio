@@ -9,5 +9,11 @@ body {
     padding: 0 !important;
     width: 100% !important; 
     overflow-x: hidden !important;
+    a {
+        color: $color-light !important;
+        :visited {
+            color: $color-light !important ;
+        }
+    }
 }
 
