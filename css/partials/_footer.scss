@@ -6,26 +6,35 @@ footer {
     font-family: map-get($fuentes, font-text);
     font-size: $font-size-xsmall;
     line-height: 2;
-    padding: $padding-high;
+    padding: $padding-mid;
     text-align: center;
     a {
         @extend %vinculos;
+        i {
+            width: 50px;
+            color: $color-light;
+            &:hover{
+                color: $color-contrast;
+            }
+        }
     }
     h3 {
-        @include tituloFooter ($fuente: $font-text, $color-detalle: $color-contrast, $padding: $padding-small);
-        font-size: $font-size-small;
-    }
+        @include tituloFooter ($fuente: $font-text, $color-detalle: $color-contrast, $padding: $padding-xsmall);
+        font-size: $font-size-small; 
+    } 
 }
 
 @media screen and (max-width: 800px) {
     footer {
         h3 {
             font-size: 1.5rem;
+
         }
         a, p{
             font-size: 1.25rem;
             padding-bottom: $padding-xsmall;
         }
+        
     }
 }
 
