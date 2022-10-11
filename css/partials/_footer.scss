@@ -23,7 +23,6 @@ footer {
         font-size: $font-size-small; 
     } 
 }
-
 @media screen and (max-width: 800px) {
     footer {
         h3 {
@@ -36,10 +35,8 @@ footer {
             font-size: 1.25rem;
             padding-bottom: $padding-xsmall;
         }
-        
     }
 }
-
 @media (min-width: 801px) and (max-width: 1200px) {
     footer {
         h3 {
